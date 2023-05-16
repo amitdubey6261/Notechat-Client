@@ -2,7 +2,7 @@ import { Provider } from 'react-redux'
 import { Routes, Route, BrowserRouter } from 'react-router-dom'
 
 import Navbar from './components/navbar/Navbar'
-import HomePage from './components/homePage/HomePage'
+import HomePage from './components/homePage/HomePage.jsx'
 import AboutPage from './components/AboutPage/AboutPage'
 import ContactPage from './components/contactPage/contactPage'
 import Footer from './components/footer/Footer'
