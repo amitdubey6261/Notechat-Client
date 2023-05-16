@@ -1,6 +1,9 @@
 import React from 'react'
 
 import image from '../../assets/images/myimg.png';
+
+import FormPage from '../formPage/FormPage';
+
 const ContactPage = () => {
     return (
         <>
@@ -16,6 +19,7 @@ const ContactPage = () => {
                         </div>
                     </div>
                 </div>
+                <FormPage/>
             </main>
         </>
     )
