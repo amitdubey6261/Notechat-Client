@@ -3,8 +3,8 @@ import { Routes, Route, BrowserRouter } from 'react-router-dom'
 
 import Navbar from './components/navbar/Navbar'
 import HomePage from './components/homePage/HomePage.jsx'
-import AboutPage from './components/AboutPage/AboutPage'
-import ContactPage from './components/contactPage/contactPage'
+import AboutPage from './components/aboutPage/AboutPage.jsx'
+import ContactPage from './components/contactPage/ContactPage.jsx'
 import Footer from './components/footer/Footer'
 
 import Store from './Redux/Store'
