@@ -2,12 +2,23 @@ import React from 'react'
 
 import './homePage.css'
 
+import image from '../../assets/images/myimg.png'
+
 const HomePage = () => {
     return (
         <>
             <main>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel debitis quia a provident hic, alias unde non magni aut molestias eligendi perspiciatis odit, ducimus quasi ea deserunt? Vitae repellendus quas soluta asperiores eum! Mollitia sint iste itaque inventore pariatur quidem ratione enim quisquam exercitationem, repudiandae voluptate delectus fugiat nostrum, consequatur quas aperiam ab? Praesentium quod sint recusandae error, ratione quas eaque molestiae! Tenetur ipsam incidunt cumque! Tempora minima consequatur nobis sunt. Ea temporibus explicabo deleniti adipisci ex provident, dolorem, ad minus esse dolorum corporis voluptates aperiam minima tempore id quia dolor vel aliquid. Laudantium doloremque nihil voluptates atque cumque laborum!
-
+                <div className="image-wrapper">
+                    <img id='image' src={image} alt="not-found" />
+                    <div className="image-overlay">
+                        <div className="box-outer" id="colored"></div>
+                        <div className="box-outer" id="text">
+                            <div className="img-o-c-t "><span className='overlay-t' id="">NOTECHAT</span></div>
+                            <div className="img-o-c-t"><h2 id=""> <span className='overlay-t-2'>FILE APPLICATION</span></h2></div>
+                            <div className="img-o-c-t"><span id="">Share your content around the world</span></div>
+                        </div>
+                    </div>
+                </div>
             </main>
         </>
     )

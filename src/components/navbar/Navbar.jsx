@@ -7,13 +7,13 @@ const Navbar = () => {
     return (
         <>
             <nav >
-                <div className="nav-o-c">NOTECHAT</div>
+                <div className="nav-o-c"><span>NOTECHAT</span></div>
                 <div className="nav-o-c" id='nac-o-i'>
-                    <div className="navigate"><Link to='/'>Home</Link></div>
-                    <div className="navigate"><Link to="/about">About</Link></div>
-                    <div className="navigate"><Link to="/contact">Contatct</Link></div>
+                    <div className="navigate"><Link to='/'><span>Home</span></Link></div>
+                    <div className="navigate"><Link to="/about"><span>About</span></Link></div>
+                    <div className="navigate"><Link to="/contact"><span>Contact</span></Link></div>
                 </div>
-                <div className="nav-o-c">LOGIN</div>
+                <div className="nav-o-c " id='login-box'><span>LOGIN</span></div>
             </nav>
         </>
     )

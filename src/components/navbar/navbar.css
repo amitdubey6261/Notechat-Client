@@ -5,6 +5,7 @@ nav{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    background-color: black;
 
 }
 
@@ -12,9 +13,24 @@ nav{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* height: 100%; */
+    background-color: black;
 }
 
 #nac-o-i{
+    background-color: black;
     width : 10cm;
+}
+
+span{
+    color: white;
+    font-family: 'Sora', sans-serif;
+}
+
+#login-box{
+    background-color: rgb(219, 54, 25);
+    width: 2cm;
+    height: 1cm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
