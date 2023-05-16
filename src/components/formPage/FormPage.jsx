@@ -40,8 +40,18 @@ const FormPage = () => {
                         </div>
                     </div>
                 </div>
-                <div className="form-section">
-
+                <div className="form-section-right">
+                    <div className="form-container">
+                        <form action="">
+                            <div className='overlay-t'>CONTACT</div>
+                            <div > <span className='overlay-t-2'>SEND ME A MESSAGE</span></div>
+                            <input type="text" name="name" id="name" placeholder='Enter Name' />
+                            <input type="email" name="name" id="name" placeholder='Enter Email' />
+                            <input type="number" name="name" id="name" placeholder='Enter Contact' />
+                            <textarea placeholder='Type Here' className='text-area' name="explain" id="" cols="30" rows="10"></textarea>
+                            <button type='submit' className='form-submit-btn'><span>Submit</span></button>
+                        </form>
+                    </div>
                 </div>
             </div>
 
