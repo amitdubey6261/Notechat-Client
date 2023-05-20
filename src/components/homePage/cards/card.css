@@ -1,0 +1,41 @@
+.card{
+    width: 30% ;
+    height: 70vh;
+    position: relative;
+    margin-top: 1rem;
+}
+
+.card-image{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    object-position: center;
+    border-radius: 1rem;
+
+}
+
+.card-overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    display: flex;
+    transition: all 1s ease;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.card-overlay:hover{
+    background-color: rgba(7, 7, 7, 0.534);
+}
+
+.card-text{
+    font-family: 'Gruppo', cursive;
+    color: white;
+    font-size: 2rem;
+    transform: translate(  0% , -50%);
+}

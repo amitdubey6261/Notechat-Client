@@ -75,3 +75,49 @@ input , .text-area{
     background-color: red;
     border: 2px solid red;
 }
+
+/* NAVIGATION */
+
+.category-navigation{
+    width: 100%;
+    height: 2cm;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navigation-wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around
+}
+
+.navigation-text{
+    color: black;
+}
+
+#heading{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+}
+
+.elements-space{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(217, 220, 223);
+    padding-top: 1cm;
+}
+
+.heading{   
+    font-size: 1cm;
+    font-family: 'Bebas Neue', sans-serif;
+    color: black;
+}
+
+.sub-heading{
+    color: black;
+}
