@@ -1,7 +1,9 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import './HomePage.css';
+// import './HomePage.css';
+
+import './HomePage.css'
 
 import img from '../../assets/images/img1.png';
 import img2 from '../../assets/images/myimg.png';
