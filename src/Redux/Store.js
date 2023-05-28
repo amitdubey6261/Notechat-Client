@@ -1,10 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 
 import { loader } from "./global/Loder";
+import { authPageDisplay } from "./local/Login";
 
 const store = configureStore({
     reducer : {
-        looader : loader , 
+        // loader : loader ,
+        loader ,  
+        authPageDisplay , 
     }
 })
 

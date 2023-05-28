@@ -1,14 +1,24 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux';
 
 import './login.css';
-
 import img from '../../assets/images/img1.png';
-
 import LoginRegisterHead from './LoginRegisterHead';
 
 const Login = () => {
+    const dispatch = useDispatch();
+    const {loginDisplay} = useSelector(state=>state.authPageDisplay);
+
+    const handleCloseBtn = ()=>{
+        dispatch({
+            type : "toggleLogin"
+        })
+        console.log(loginDisplay)
+    }
+
     return (
-        <div className='Login-wrapper'>
+        // <div className='Login-wrapper' style={{display : 'none'}}>
+        <div className='Login-wrapper' style={{display : loginDisplay ? 'flex' : 'none' }} >
             <div className="login-content">
                 <div className='login-head'>
                     <LoginRegisterHead />
@@ -19,7 +29,7 @@ const Login = () => {
                 <button className='login-btn'><span>login</span></button>
             </div>
             <div className="login-image"><img className='login-image-img' src={img} alt="" /></div>
-            <div className="close-button">X</div>
+            <div className="close-button" onClick={ handleCloseBtn }>X</div>
         </div>
     )
 }

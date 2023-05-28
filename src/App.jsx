@@ -8,6 +8,7 @@ import AboutPage from './components/aboutPage/AboutPage.jsx'
 import ContactPage from './components/contactPage/ContactPage.jsx'
 import Footer from './components/footer/Footer'
 import Login from './components/login/Login'
+import ProductPage from './components/productPage/ProductPage'
 
 import Store from './Redux/Store'
 
@@ -23,11 +24,11 @@ function App() {
         <BrowserRouter>
           <Provider store={Store}>
             <Navbar />
-            {/* <Login/> */}
+            <Login/>
             {/* <Register/> */}
+            <ProductPage/>
             <Routes>
               <Route path='/' element={<HomePage />}></Route>
-              <Route path='/login' element={<Login />}></Route>
               <Route path='/collection' element={<Collections />}></Route>
               <Route path='/about' element={<AboutPage />}></Route>
               <Route path='/contact' element={<ContactPage />}></Route>

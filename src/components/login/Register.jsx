@@ -21,6 +21,7 @@ const Register = () => {
                 <input className='inp-fields' placeholder='confirm password' type="password" name="" id="password" />
                 <span className='forget-pass'>Forgot Password</span>
                 <button className='login-btn'><span>Register</span></button>
+                <div className="close-button">X</div>
             </div>
             <div className="login-image"><img className='login-image-img' src={img} alt="" /></div>
         </div>
