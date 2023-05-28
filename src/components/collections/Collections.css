@@ -1,0 +1,60 @@
+main{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.image-wrapper{
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+#image{
+    background-color: antiquewhite;
+    width: 100%;
+    height: 10cm;
+    object-fit: cover;
+    object-position: center;
+}
+
+.image-overlay{
+    background-color: rgba(0, 0, 0, 0.719);
+    width: 10cm;
+    height: 3cm;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate( 0% , -40% );
+    display: flex;
+}
+
+#colored{
+    background-color: red;
+    width: 1cm ; 
+}
+
+#text{
+    margin-left: 10px;
+}
+
+.overlay-t{
+    color: rgb(255, 0, 0);
+    font-size: 0.5cm;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.overlay-t-2{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1cm;
+
+}
+
+.card-container{
+    border: 2px solid white;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: space-around;
+    align-items: center;
+}

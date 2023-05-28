@@ -1,60 +1,141 @@
-main{
+.crousal-img-container {
     width: 100%;
-    height: 100%;
     background-color: black;
 }
 
-.image-wrapper{
-    overflow: hidden;
+.crousal-img {
     width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    object-position: right;
+}
+
+.home-intro-img {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+}
+
+.home-into-wrapper {
+    margin-top: 10vh;
     position: relative;
 }
 
-#image{
-    background-color: antiquewhite;
-    width: 100%;
-    height: 10cm;
-    object-fit: cover;
-    object-position: center;
-}
-
-.image-overlay{
-    background-color: rgba(0, 0, 0, 0.719);
-    width: 10cm;
-    height: 3cm;
+.home-intro-img-overlay{
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
-    transform: translate( 0% , -40% );
+    width: 100%;
+    height: 100%;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.459);
 }
 
-#colored{
-    background-color: red;
-    width: 1cm ; 
-}
 
-#text{
-    margin-left: 10px;
-}
-
-.overlay-t{
-    color: rgb(255, 0, 0);
-    font-size: 0.5cm;
-    font-family: 'Bebas Neue', sans-serif;
-}
-
-.overlay-t-2{
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1cm;
-
-}
-
-.card-container{
-    border: 2px solid white;
+.intro-content{
+    /* background-color: rgba(0, 0, 0, 0.568); */
+    width: 100%;
+    height: 3cm;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 3rem;
+    text-align: center;
+    vertical-align: center;
+    color: white;
+    background-color: rgb(44, 43, 43);
     display: flex;
-    flex-wrap: wrap;
-    width: 80%;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
+
+.intro-content-2{
+    width: 100%;
+    height : 40%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bebas Neue', 'sans-serif';
+}
+
+.i-c-2-heading{
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: white;
+}
+
+.i-c-2-heading-2{
+    color: white;
+}
+
+.style-btn{
+    width: 3cm;
+    height: 1cm;
+    text-transform: uppercase;
+    background-color: rgba(240, 248, 255, 0);
+    color: white;
+    border-color: aliceblue;
+    margin-top: 30px;
+}
+
+.style-btn-1{
+    background-color: red;
+    border: 1px solid red;
+}   
+
+.style-btn-2{
+    margin-left: 1cm;
+    border: 2px solid white;
+}
+
+.warapper-2{
+    display: flex;
+    flex-direction: row;
+    height: 60vh;
+}
+
+.crousal-wrapper-2{
+    width: 60%;
+    height: 100%;
+}
+
+.colored-boundary{
+    background-color: red;
+    width: 10%;
+    height: 100%;
+}
+
+.wrapper-2-head-1{
+    font-family: 'Bebas Neue', 'sans-serif' ;
+    color: red;
+    font-size: 2rem;
+}
+.wrapper-2-head-2{
+    font-family:'Bebas Neue', 'sans-serif';
+    font-size: 3rem;
+}
+.wrapper-2-head-3{
+    font-family: 'Sora';
+}
+
+.wrapper-2-content{
+    font-family: 'Gruppo';
+    font-size: 2rem;
+}
+
+.content{
+    margin: 1rem ;
+}
+
+.find-notes-btn{
+    width: 5cm;
+    height: 1cm;
+    background-color: red;
+    color: white;
+    border: 2px solid red;
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+
