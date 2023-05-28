@@ -1,0 +1,96 @@
+.Login-wrapper{
+    background-color: rgb(0, 0, 0);
+    width: 80%;
+    height: 70vh;
+    display: flex;
+    position: fixed;
+    top : 50% ; 
+    left: 50%;
+    transform: translate(-50% , -50%);
+    z-index: 4;
+}
+
+.login-content{
+    width: 50%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+}
+
+.login-image{
+    width: 50%;
+}
+
+.login-image-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.login-btn{
+    width: 80%;
+    height: 5%;
+    background-color: red;
+    border: 2px solid red;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+
+.inp-fields{
+    width: 80%;
+}
+
+.forget-pass{
+    position: relative;
+}
+
+.register-here {
+    font-size: 1rem;
+    color: red; 
+}
+
+.heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.head-style{
+    color: white;
+    font-size: 1.5rem;
+}
+
+.heading-login-1{
+    color: red;
+    font-family: 'Sora';
+}
+
+.heading-login-2{
+    font-size: 2rem;
+}
+
+.heading-login-3{
+    font-family: 'Sora';
+    font-size: 1rem;
+}
+
+.inp-fields{
+    padding-left: 1rem;
+    color: white;
+    transition: all 2sec ease;
+}
+
+.inp-fields:hover{
+    border-color: red;
+}
+
+.close-button{
+    color: rgb(255, 0, 0);
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 20px;
+    font-size: 2rem;
+}

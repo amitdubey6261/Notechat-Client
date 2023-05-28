@@ -39,3 +39,9 @@ span{
 .btn{
     margin-top: 10px;
 }
+
+.login-btn-main{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}

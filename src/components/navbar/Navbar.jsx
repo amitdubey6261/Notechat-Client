@@ -14,7 +14,7 @@ const Navbar = () => {
                     <div className="navigate"><Link to="/about"><span>About</span></Link></div>
                     <div className="navigate"><Link to="/contact"><span>Contact</span></Link></div>
                 </div>
-                <div className="nav-o-c " id='login-box'><span>LOGIN</span></div>
+                <div className="nav-o-c " id='login-box'><span ><Link to='/login' className='login-btn-main'>login</Link></span></div>
             </nav>
         </>
     )
