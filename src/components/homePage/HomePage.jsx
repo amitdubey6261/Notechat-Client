@@ -8,7 +8,6 @@ import img2 from '../../assets/images/myimg.png';
 import img3 from '../../assets/images/myimg2.png';
 import img4 from '../../assets/images/myimg3.png';
 
-import './HomePage.css';
 import 'swiper/css';
 
 const HomePage = () => {
