@@ -9,6 +9,7 @@ import ContactPage from './components/contactPage/ContactPage.jsx'
 import Footer from './components/footer/Footer'
 import Login from './components/login/Login'
 import ProductPage from './components/productPage/ProductPage'
+import CreateNote from './components/createProduct/CreateNote'
 
 import Store from './Redux/Store'
 
@@ -25,13 +26,14 @@ function App() {
           <Provider store={Store}>
             <Navbar />
             <Login/>
-            {/* <Register/> */}
+            <Register/>
             <ProductPage/>
             <Routes>
               <Route path='/' element={<HomePage />}></Route>
               <Route path='/collection' element={<Collections />}></Route>
               <Route path='/about' element={<AboutPage />}></Route>
               <Route path='/contact' element={<ContactPage />}></Route>
+              <Route path='/create' element={<CreateNote />}></Route>
             </Routes>
             <Footer />
           </Provider>

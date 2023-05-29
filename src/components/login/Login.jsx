@@ -7,7 +7,7 @@ import LoginRegisterHead from './LoginRegisterHead';
 
 const Login = () => {
     const dispatch = useDispatch();
-    const {loginDisplay} = useSelector(state=>state.authPageDisplay);
+    const {loginDisplay} = useSelector(state=>state.LoginRegister);
 
     const handleCloseBtn = ()=>{
         dispatch({
@@ -17,7 +17,6 @@ const Login = () => {
     }
 
     return (
-        // <div className='Login-wrapper' style={{display : 'none'}}>
         <div className='Login-wrapper' style={{display : loginDisplay ? 'flex' : 'none' }} >
             <div className="login-content">
                 <div className='login-head'>

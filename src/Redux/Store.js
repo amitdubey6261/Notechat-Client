@@ -1,13 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
 
 import { loader } from "./global/Loder";
-import { authPageDisplay } from "./local/Login";
+import { LoginRegister } from "./local/Login";
+import { ProductPage } from "./local/ProductPage";
 
 const store = configureStore({
     reducer : {
-        // loader : loader ,
         loader ,  
-        authPageDisplay , 
+        LoginRegister ,
+        ProductPage ,  
     }
 })
 

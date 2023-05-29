@@ -3,11 +3,21 @@ import React from 'react';
 import img from '../../assets/images/img1.png'
 
 import './ProductPage.css';
+import { useDispatch, useSelector } from 'react-redux';
 
 const ProductPage = () => {
+    const dispatch = useDispatch();
+    const {display} = useSelector( (state)=> state.ProductPage );
+
+    const handleCloseBtn = () =>{
+        dispatch({
+            type : "toggleProduct"
+        })
+    }
+
     return (
-        <div className='product-wrapper'>
-            <div className="close-btn">X</div>
+        <div className='product-wrapper' style={{display : display  ? 'flex' : 'none'}}>
+            <div className="close-btn" onClick={handleCloseBtn}>X</div>
             <div className="product-content-wrapper">
                 <div className="product-content product-images">
                     <div className="product-img-wrap p-img1"><img className='product-image' src={img} alt="not -found" /></div>

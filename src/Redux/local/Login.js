@@ -5,7 +5,7 @@ const initialState = {
     registerDisplay : false ,
 }
 
-export const authPageDisplay = createReducer( initialState , {
+export const LoginRegister = createReducer( initialState , {
     toggleLogin : (state , action)=>{
         if(state.loginDisplay == false ){
             state.loginDisplay = true ; 
