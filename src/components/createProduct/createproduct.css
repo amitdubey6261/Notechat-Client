@@ -46,6 +46,7 @@
 }
 
 .thumbnail-wrapper{
+    position: relative;
 }
 
 .image-container{

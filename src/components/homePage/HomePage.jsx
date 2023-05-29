@@ -13,7 +13,7 @@ import 'swiper/css';
 const HomePage = () => {
     return (
         <>
-            <div>
+            <div className='home-page-crousal'>
                 <Swiper
                     spaceBetween={0}
                     slidesPerView={1}
@@ -25,6 +25,16 @@ const HomePage = () => {
                     <SwiperSlide><div className='crousal-img-container'><img className='crousal-img' src={img3} alt="not-found" /></div></SwiperSlide>
                     <SwiperSlide><div className='crousal-img-container'><img className='crousal-img' src={img4} alt="not-found" /></div></SwiperSlide>
                 </Swiper>
+                <div className="left-arrow-hover-wrapper">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div className="right-arrow-hover-wrapper">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
 
             <div className='home-into-wrapper'>
@@ -45,20 +55,30 @@ const HomePage = () => {
             <div className="home-into-wrapper warapper-2">
                 <div className="colored-boundary"></div>
                 <div className="crousal-wrapper-2">
-                <Swiper
-                    spaceBetween={10}
-                    slidesPerView={3}
-                    onSlideChange={() => console.log('slide change')}
-                    onSwiper={(swiper) => console.log(swiper)}
-                >
-                    <SwiperSlide><div className='crousal-img-container'><img className='crousal-img' src={img3} alt="not-found" /></div></SwiperSlide>
-                    <SwiperSlide><div className='crousal-img-container'><img className='crousal-img' src={img} alt="not-found" /></div></SwiperSlide>
-                    <SwiperSlide><div className='crousal-img-container'><img className='crousal-img' src={img} alt="not-found" /></div></SwiperSlide>
-                    <SwiperSlide><div className='crousal-img-container'><img className='crousal-img' src={img} alt="not-found" /></div></SwiperSlide>
-                    <SwiperSlide><div className='crousal-img-container'><img className='crousal-img' src={img} alt="not-found" /></div></SwiperSlide>
-                    <SwiperSlide><div className='crousal-img-container'><img className='crousal-img' src={img} alt="not-found" /></div></SwiperSlide>
+                    <Swiper
+                        spaceBetween={10}
+                        slidesPerView={3}
+                        onSlideChange={() => console.log('slide change')}
+                        onSwiper={(swiper) => console.log(swiper)}
+                    >
+                        <SwiperSlide><div className='crousal-img-container'><img className='crousal-img' src={img3} alt="not-found" /></div></SwiperSlide>
+                        <SwiperSlide><div className='crousal-img-container'><img className='crousal-img' src={img} alt="not-found" /></div></SwiperSlide>
+                        <SwiperSlide><div className='crousal-img-container'><img className='crousal-img' src={img} alt="not-found" /></div></SwiperSlide>
+                        <SwiperSlide><div className='crousal-img-container'><img className='crousal-img' src={img} alt="not-found" /></div></SwiperSlide>
+                        <SwiperSlide><div className='crousal-img-container'><img className='crousal-img' src={img} alt="not-found" /></div></SwiperSlide>
+                        <SwiperSlide><div className='crousal-img-container'><img className='crousal-img' src={img} alt="not-found" /></div></SwiperSlide>
 
-                </Swiper>
+                    </Swiper>
+                    <div className="left-arrow-hover-wrapper">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div className="right-arrow-hover-wrapper">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
                 <div className="content">
                     <div className='wrapper-2-head-1'>NTC NOTES</div>

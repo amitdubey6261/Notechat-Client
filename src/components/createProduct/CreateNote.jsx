@@ -16,38 +16,38 @@ const CreateNote = () => {
     const [thumbnail3, setthumbnail3] = useState(null);
     const [thumbnail4, setthumbnail4] = useState(null);
 
-    const handleThumb1Click = () =>{
+    const handleThumb1Click = () => {
         thumnail1ref.current.click();
     }
-    const handleThumb2Click = () =>{
+    const handleThumb2Click = () => {
         thumnail2ref.current.click();
     }
-    const handleThumb3Click = () =>{
+    const handleThumb3Click = () => {
         thumnail3ref.current.click();
     }
-    const handleThumb4Click = () =>{
+    const handleThumb4Click = () => {
         thumnail4ref.current.click();
     }
 
-    const handleThumb1Change = (e) =>{
+    const handleThumb1Change = (e) => {
         const thumnailimage1 = e.target.files[0];
         console.log(thumnailimage1);
-        setthumbnail1(thumnailimage1); 
+        setthumbnail1(thumnailimage1);
     }
-    const handleThumb2Change = (e) =>{
+    const handleThumb2Change = (e) => {
         const thumnailimage2 = e.target.files[0];
         console.log(thumnailimage2);
-        setthumbnail2(thumnailimage2); 
+        setthumbnail2(thumnailimage2);
     }
-    const handleThumb3Change = (e) =>{
+    const handleThumb3Change = (e) => {
         const thumnailimage3 = e.target.files[0];
         console.log(thumnailimage3);
-        setthumbnail3(thumnailimage3); 
+        setthumbnail3(thumnailimage3);
     }
-    const handleThumb4Change = (e) =>{
+    const handleThumb4Change = (e) => {
         const thumnailimage4 = e.target.files[0];
         console.log(thumnailimage4);
-        setthumbnail4(thumnailimage4); 
+        setthumbnail4(thumnailimage4);
     }
 
     return (
@@ -75,47 +75,47 @@ const CreateNote = () => {
 
 
                                 <SwiperSlide>
-                                    <div  className="image-container">
+                                    <div className="image-container">
                                         {
                                             thumbnail1 ? (<img className='thumbnail' src={URL.createObjectURL(thumbnail1)} alt="" />) : (<img className='thumbnail' src={image} alt="" />)
                                         }
                                         <input className='file-input-field' type="file" onChange={handleThumb1Change} ref={thumnail1ref} name="thubnail1" id="thumbnail" />
-                                        <div onClick={ handleThumb1Click } className="thumnail-overlay">
+                                        <div onClick={handleThumb1Click} className="thumnail-overlay">
                                             <div className="thumbnail-text">Thumbnail1  Click to Add Image</div>
                                         </div>
                                     </div>
                                 </SwiperSlide>
 
                                 <SwiperSlide>
-                                    <div  className="image-container">
+                                    <div className="image-container">
                                         {
                                             thumbnail2 ? (<img className='thumbnail' src={URL.createObjectURL(thumbnail2)} alt="" />) : (<img className='thumbnail' src={image} alt="" />)
                                         }
                                         <input className='file-input-field' type="file" onChange={handleThumb2Change} ref={thumnail2ref} name="thubnail2" id="thumbnai2" />
-                                        <div onClick={ handleThumb2Click } className="thumnail-overlay">
+                                        <div onClick={handleThumb2Click} className="thumnail-overlay">
                                             <div className="thumbnail-text">Thumbnail2  Click to Add Image</div>
                                         </div>
                                     </div>
                                 </SwiperSlide>
-                                
+
                                 <SwiperSlide>
-                                    <div  className="image-container">
+                                    <div className="image-container">
                                         {
                                             thumbnail3 ? (<img className='thumbnail' src={URL.createObjectURL(thumbnail3)} alt="" />) : (<img className='thumbnail' src={image} alt="" />)
                                         }
                                         <input className='file-input-field' type="file" onChange={handleThumb3Change} ref={thumnail3ref} name="thubnail3" id="thumbnail3" />
-                                        <div onClick={ handleThumb3Click } className="thumnail-overlay">
+                                        <div onClick={handleThumb3Click} className="thumnail-overlay">
                                             <div className="thumbnail-text">Thumbnail3  Click to Add Image</div>
                                         </div>
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <div  className="image-container">
+                                    <div className="image-container">
                                         {
                                             thumbnail4 ? (<img className='thumbnail' src={URL.createObjectURL(thumbnail4)} alt="" />) : (<img className='thumbnail' src={image} alt="" />)
                                         }
                                         <input className='file-input-field' type="file" onChange={handleThumb4Change} ref={thumnail4ref} name="thubnail4" id="thumbnail4" />
-                                        <div onClick={ handleThumb4Click } className="thumnail-overlay">
+                                        <div onClick={handleThumb4Click} className="thumnail-overlay">
                                             <div className="thumbnail-text">Thumbnail4  Click to Add Image</div>
                                         </div>
                                     </div>
@@ -123,6 +123,17 @@ const CreateNote = () => {
 
 
                             </Swiper>
+
+                            <div className="left-arrow-hover-wrapper">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div className="right-arrow-hover-wrapper">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
                         </div>
                     </div>
                     <div className="form-section-right">
