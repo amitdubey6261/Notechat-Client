@@ -26,10 +26,18 @@
 
 
 .left-arrow-hover-wrapper span:nth-child(2){
-    animation-delay: 0.2s;
+    animation-delay: -0.2s;
 }
 
 .left-arrow-hover-wrapper span:nth-child(3){
+    animation-delay: -0.4s;
+}
+
+.right-arrow-hover-wrapper span:nth-child(2){
+    animation-delay: 0.2s;
+}
+
+.right-arrow-hover-wrapper span:nth-child(3){
     animation-delay: 0.4s;
 }
 
@@ -211,8 +219,8 @@
 }
 
 .wrapper-2-content{
-    font-family: 'Gruppo';
-    font-size: 2rem;
+    font-family: 'Sora';
+    font-size: 1rem;
 }
 
 .content{

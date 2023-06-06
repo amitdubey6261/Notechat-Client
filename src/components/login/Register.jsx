@@ -10,7 +10,7 @@ import { useDispatch, useSelector } from 'react-redux';
 const Register = () => {
 
     const dispatch = useDispatch();
-    const { registerDisplay } = useSelector((state) => state.LoginRegister)
+    const { registerDisplay } = useSelector((state) => state.Register)
 
     const handleCloseBtn = () => {
         dispatch({
@@ -22,16 +22,23 @@ const Register = () => {
         <div className='Login-wrapper' style={{ display: registerDisplay ? 'flex' : 'none' }}>
             <div className="close-button" onClick={handleCloseBtn}>X</div>
             <div className="login-content">
-                <div className='login-head'>
-                    <LoginRegisterHead />
+                <LoginRegisterHead />
+                <div className="registration-form">
+                    <div className='register-avatar'>
+                        <input type="file" className='inp-fields' />
+                    </div>
+                    <input className='inp-fields' type="text" placeholder='name' />
+                    <input className='inp-fields' type='email' placeholder='email' />
+                    <input className='inp-fields' type='password' placeholder='password' />
+                    <input className='inp-fields' type="text" placeholder='collage' />
+                    <input className='inp-fields' type='number' placeholder='contact' />
+                    <input className='inp-fields' type="number" placeholder='year' />
+                    <input className='inp-fields' type="text" placeholder='gender' />
+                    <input className='inp-fields' type="text" placeholder='city' />
+                    <input className='inp-fields' type="text" placeholder='course' />
+                    <input className='inp-fields' type="text" placeholder='upiID' />
                 </div>
-                <input className='inp-fields' type="text" placeholder='First Name' />
-                <input className='inp-fields' type="text" placeholder='Last Name' />
-                <input className='inp-fields' type="text" placeholder='Phone Number' />
-                <input className='inp-fields' placeholder='email' type="email" name="" id="email" />
-                <input className='inp-fields' placeholder='password' type="password" name="" id="password" />
-                <input className='inp-fields' placeholder='confirm password' type="password" name="" id="password" />
-                <button className='login-btn'><span>Register</span></button>
+                <button className='form-submit-btn'><span>Register</span></button>
             </div>
             <div className="login-image"><img className='login-image-img' src={img} alt="" /></div>
         </div>

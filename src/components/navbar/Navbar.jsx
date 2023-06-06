@@ -6,7 +6,7 @@ import './navbar.css'
 import { useDispatch, useSelector } from 'react-redux'
 const Navbar = () => {
     const dispatch = useDispatch();
-    const { loginDisplay } = useSelector((state) => state.LoginRegister);
+    const { loginDisplay } = useSelector((state) => state.Login);
 
     const handleLogin = () => {
 
