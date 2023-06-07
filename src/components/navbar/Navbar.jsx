@@ -14,7 +14,7 @@ const Navbar = () => {
             type: "toggleLogin"
         })
 
-        console.log(loginDisplay)
+        console.log(document.cookie)
     }
 
     return (

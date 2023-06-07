@@ -1,198 +1,24 @@
 import React from "react";
 import "./userTable.css";
 
+import { useSelector } from "react-redux";
+
 const UserTable = () => {
-    const data = [
-        {
-            name: "amit",
-            email: "amitdubey6261@gmail.com",
-            Role : "user"
-        },
-        {
-            name: "ankit",
-            email: "ankitdubey6261@gmail.com",
-            Role : "user"
-        },
-        {
-            name: "amit",
-            email: "amitdubey6261@gmail.com",
-            Role : "user"
-        },
-        {
-            name: "amit",
-            email: "amitdubey6261@gmail.com",
-            Role : "user"
-        },
-        {
-            name: "ankit",
-            email: "ankitdubey6261@gmail.com",
-            Role : "user"
-        },
-        {
-            name: "amit",
-            email: "amitdubey6261@gmail.com",
-            Role : "user"
-        },
-        {
-            name: "amit",
-            email: "amitdubey6261@gmail.com",
-            Role : "user"
-        },
-        {
-            name: "ankit",
-            email: "ankitdubey6261@gmail.com",
-            Role : "user"
-        },
-        {
-            name: "amit",
-            email: "amitdubey6261@gmail.com",
-            Role : "user"
-        },
-        {
-            name: "amit",
-            email: "amitdubey6261@gmail.com",
-            Role : "user"
-        },
-        {
-            name: "ankit",
-            email: "ankitdubey6261@gmail.com",
-            Role : "user"
-        },
-        {
-            name: "amit",
-            email: "amitdubey6261@gmail.com",
-            Role : "user"
-        },
-        {
-            name: "amit",
-            email: "amitdubey6261@gmail.com",
-            Role : "user"
-        },
-        {
-            name: "ankit",
-            email: "ankitdubey6261@gmail.com",
-            Role : "user"
-        },
-        {
-            name: "amit",
-            email: "amitdubey6261@gmail.com",
-            Role : "user"
-        },
-        {
-            name: "amit",
-            email: "amitdubey6261@gmail.com",
-            Role : "user"
-        },
-        {
-            name: "ankit",
-            email: "ankitdubey6261@gmail.com",
-            Role : "user"
-        },
-        {
-            name: "amit",
-            email: "amitdubey6261@gmail.com",
-            Role : "user"
-        },
-        {
-            name: "amit",
-            email: "amitdubey6261@gmail.com",
-            Role : "user"
-        },
-        {
-            name: "ankit",
-            email: "ankitdubey6261@gmail.com",
-            Role : "user"
-        },
-        {
-            name: "amit",
-            email: "amitdubey6261@gmail.com",
-            Role : "user"
-        },
-        {
-            name: "amit",
-            email: "amitdubey6261@gmail.com",
-            Role : "user"
-        },
-        {
-            name: "ankit",
-            email: "ankitdubey6261@gmail.com",
-            Role : "user"
-        },
-        {
-            name: "amit",
-            email: "amitdubey6261@gmail.com",
-            Role : "user"
-        },
-        {
-            name: "amit",
-            email: "amitdubey6261@gmail.com",
-            Role : "user"
-        },
-        {
-            name: "ankit",
-            email: "ankitdubey6261@gmail.com",
-            Role : "user"
-        },
-        {
-            name: "amit",
-            email: "amitdubey6261@gmail.com",
-            Role : "user"
-        },
-        {
-            name: "amit",
-            email: "amitdubey6261@gmail.com",
-            Role : "user"
-        },
-        {
-            name: "ankit",
-            email: "ankitdubey6261@gmail.com",
-            Role : "user"
-        },
-        {
-            name: "amit",
-            email: "amitdubey6261@gmail.com",
-            Role : "user"
-        },
-        {
-            name: "amit",
-            email: "amitdubey6261@gmail.com",
-            Role : "user"
-        },
-        {
-            name: "ankit",
-            email: "ankitdubey6261@gmail.com",
-            Role : "user"
-        },
-        {
-            name: "amit",
-            email: "amitdubey6261@gmail.com",
-            Role : "user"
-        },
-        {
-            name: "amit",
-            email: "amitdubey6261@gmail.com",
-            Role : "user"
-        },
-        {
-            name: "ankit",
-            email: "ankitdubey6261@gmail.com",
-            Role : "user"
-        },
-        {
-            name: "amit",
-            email: "amitdubey6261@gmail.com",
-            Role : "user"
-        },
-    ];
+
+    const { res } = useSelector( state => state.AdminReducer )
+    const { user , success } = res ;
+
     return (
         <>
             <div className="user-table-wrapper">
                 <table className="user-table">
                     <thead className="user-table-head">
-                        <th> Users </th>
+                        <tr>
+                            <th> Users </th>
+                        </tr>
                     </thead>
                     <tbody className="user-table-body" >
-                        {data.map((val, idx) => {
+                        {user.map((val, idx) => {
                             return (
                                 <tr key={idx} className="user-table-row">
                                     <td className="t-data id">{idx}</td>
@@ -209,7 +35,7 @@ const UserTable = () => {
                 </table>
             </div>
         </>
-    );
+    )            
 };
 
 export default UserTable;
