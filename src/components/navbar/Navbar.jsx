@@ -3,19 +3,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import './navbar.css'
-import { useDispatch, useSelector } from 'react-redux'
+import LoginBtn from './LoginBtn';
+
 const Navbar = () => {
-    const dispatch = useDispatch();
-    const { loginDisplay } = useSelector((state) => state.Login);
-
-    const handleLogin = () => {
-
-        dispatch({
-            type: "toggleLogin"
-        })
-
-        console.log(document.cookie)
-    }
 
     return (
         <>
@@ -27,10 +17,11 @@ const Navbar = () => {
                     <div className="navigate"><Link to="/about"><span>About</span></Link></div>
                     <div className="navigate"><Link to="/contact"><span>Contact</span></Link></div>
                 </div>
-                <div className="nav-o-c " id='login-box'><span onClick={handleLogin}>LOGIN</span></div>
+                <LoginBtn/>
             </nav>
         </>
     )
+
 }
 
-export default Navbar
+export default Navbar ; 

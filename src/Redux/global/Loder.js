@@ -1,4 +1,6 @@
-import { createReducer } from "@reduxjs/toolkit";
+import { createAsyncThunk, createReducer ,  } from "@reduxjs/toolkit";
+import axios from "axios";
+import { apiConfig } from "../../static";
 
 const initState = {
     loading : false , 

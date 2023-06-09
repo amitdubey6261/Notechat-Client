@@ -1,23 +1,26 @@
 import { createReducer , createAsyncThunk } from "@reduxjs/toolkit";
 import { toast } from 'react-toastify'
 import axios from 'axios' ; 
+import Cookies from "js-cookie";
+import { apiConfig, backendUrl } from "../../static";
 
 const initialState = {
     loginDisplay : false ,
     res : [] , 
-    status : null 
+    status : null , 
+    error : null ,  
 }
 
 export const loginRequest = createAsyncThunk( 'user/login' , async(obj) =>{
 
     try{
-        const res = await axios.post('http://localhost:5000/api/v1/user/login' , {...obj}) ;
-        toast.success('Login Successfull !');
+        const res = await axios.post(`${backendUrl()}/api/v1/user/login` , {...obj} , {...apiConfig()}) ;
         return res ; 
     }
     catch(e){
         toast.error(e) ;
     }
+
 })  
 
 export const Login = createReducer( initialState , {
@@ -32,16 +35,16 @@ export const Login = createReducer( initialState , {
     }
     , 
     [loginRequest.pending] : ( state , action ) =>{
-        state.status = 'Pending' ; 
+        state.status = 'pending' ; 
     }
     ,
     [loginRequest.fulfilled] : ( state , action ) =>{
         state.status = 'fullfilled' ;
+        state.res = action.payload ; 
     } 
     , 
     [loginRequest.rejected] : ( state , action )=>{
         state.status = 'rejected' ; 
-        toast.error( 'Login Request Rejected' ) ; 
     }
 
 })

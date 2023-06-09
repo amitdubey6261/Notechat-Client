@@ -1,7 +1,9 @@
 import { createReducer } from "@reduxjs/toolkit";
 
 const initialState = {
-    display : false , 
+    display : false ,
+    res : [] , 
+    status : null ,  
 }
 
 export const ProductPage = createReducer( initialState , {

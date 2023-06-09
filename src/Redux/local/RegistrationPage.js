@@ -1,21 +1,24 @@
 import { createAsyncThunk, createReducer } from "@reduxjs/toolkit";
 import axios from "axios";
-import { toast } from "react-toastify";
+import { apiConfig, backendUrl } from "../../static";
 
 const initialState = {
     registerDisplay: false ,
-    res : [] , 
-    status : null 
+    res : [] ,  
+    status : null , 
+    error : null , 
 }
 
 export const registrationRequest = createAsyncThunk( 'user/register' , async ( fields , { rejectWithValue } ) =>{
     try{
-        const res = await axios.post('http://localhost:5000/api/v1/user/create' , {...fields} )  ;
+        const res = await axios.post(`${backendUrl()}/api/v1/user/create` , {...fields} , {...apiConfig()} )  ;
         return res ; 
     }
     catch(e){
-        console.log(e.response.data);
-        return rejectWithValue(e.response.data) ; 
+        if(e.response || e.response.data.message)
+            return rejectWithValue(e.response.data) ; 
+        else
+            return rejectWithValue( error.message );
     }
 } )
 
@@ -36,10 +39,11 @@ export const Register = createReducer(initialState, {
     , 
     [ registrationRequest.fulfilled ] : ( state , action ) =>{
         state.status = 'fullfilled' ; 
+        state.res = action.payload ; 
     }
     ,
     [ registrationRequest.rejected ] : ( state , action ) =>{
         state.status = 'rejected '; 
-        toast.error('registration failed!');
+        state.error = action.payload ;
     }
 })

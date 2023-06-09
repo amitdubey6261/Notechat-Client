@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-
 import './login.css';
 
 import img from '../../assets/images/img1.png';
@@ -10,7 +9,8 @@ import { registrationRequest } from '../../Redux/local/RegistrationPage';
 
 const Register = () => {
     const dispatch = useDispatch();
-    const { registerDisplay } = useSelector((state) => state.Register) ; 
+    const { registerDisplay , res , status } = useSelector((state) => state.Register) ; 
+    // const { jwt } = useSelector(( state ) => state.
     const [ fields , setfields ] = useState({ 
         name : "" , 
         email : "" , 
@@ -30,14 +30,13 @@ const Register = () => {
 
     const validateAndSubmit = ( e ) =>{
         e.preventDefault();
-        console.log(fields); 
         dispatch(registrationRequest(fields));
     }  
 
     const handleCloseBtn = () => {
         dispatch({
             type: "toggleRegister"
-        })
+        });
     }
 
     return (
