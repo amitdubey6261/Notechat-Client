@@ -1,40 +1,35 @@
 import { createAsyncThunk, createReducer } from "@reduxjs/toolkit"
 import axios from "axios"
-import { apiConfig } from "../../static"
+import { apiConfig, handleApiError } from "../../static"
 
 const initialState = {
-    status : null , 
-    res : [] , 
+    status : false , 
+    res : {} , 
     error : null , 
 }
 
-export const loadUser = createAsyncThunk( `user/loadUser` , async({rejectWithValue})=>{
+export const loadUser = createAsyncThunk( `user/loadUser` , async( _ , {rejectWithValue})=>{
     try{
-        const res = await axios.get( `` , {...apiConfig()});
+        const res = await axios.get( `http://localhost:5000/api/v1/user` , {...apiConfig()});
         return res ; 
     }
     catch(e){
-        if( e.response || e.response.data.message ){
-            return rejectWithValue( e.response.data ) ; 
-        }
-        else{
-            return rejectWithValue( e.message ); 
-        }
+        return handleApiError( e , rejectWithValue );
     }
 })
 
 export const loadUserReducer = createReducer( initialState , {
     [loadUser.pending] : ( state , action )=>{
-        state.status = 'pending' ; 
+        state.status = false ; 
     }
     , 
     [loadUser.fulfilled] : ( state , action ) =>{
-        state.status = 'fulfilled' ; 
-        res = action.payload ; 
+        state.status = true ; 
+        state.res = action.payload ; 
     }
     ,
     [loadUser.rejected] : (state , action ) =>{
-        state.status = 'rejected' ; 
-        error =  action.paylaod ; 
+        state.status = false ; 
+        state.error =  action.paylaod ; 
     }
 })

@@ -1,24 +1,21 @@
 import { createAsyncThunk, createReducer } from "@reduxjs/toolkit";
 import axios from "axios";
-import { apiConfig, backendUrl } from "../../static";
+import { apiConfig, backendUrl, handleApiError } from "../../static";
 
 const initialState = {
     registerDisplay: false ,
     res : [] ,  
-    status : null , 
+    status : false , 
     error : null , 
 }
 
 export const registrationRequest = createAsyncThunk( 'user/register' , async ( fields , { rejectWithValue } ) =>{
     try{
-        const res = await axios.post(`${backendUrl()}/api/v1/user/create` , {...fields} , {...apiConfig()} )  ;
+        const res = await axios.post( `http://localhost:5000/api/v1/user/create` , {...fields} , {...apiConfig()} ) ;
         return res ; 
     }
     catch(e){
-        if(e.response || e.response.data.message)
-            return rejectWithValue(e.response.data) ; 
-        else
-            return rejectWithValue( error.message );
+        return handleApiError( e , rejectWithValue ); 
     }
 } )
 
@@ -34,16 +31,16 @@ export const Register = createReducer(initialState, {
     }
     ,
     [ registrationRequest.pending ] : ( state , action ) =>{
-        state.status = 'pending' ; 
+        state.status =  false; 
     } 
     , 
     [ registrationRequest.fulfilled ] : ( state , action ) =>{
-        state.status = 'fullfilled' ; 
+        state.status = true ; 
         state.res = action.payload ; 
     }
     ,
     [ registrationRequest.rejected ] : ( state , action ) =>{
-        state.status = 'rejected '; 
+        state.status = false ; 
         state.error = action.payload ;
     }
 })

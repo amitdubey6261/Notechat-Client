@@ -1,9 +1,9 @@
 import React from "react";
-import {useDispatch} from 'react-redux'
+import { useDispatch } from 'react-redux'
 
 const LoginBtn = () => {
-  const dispatch = useDispatch() ; 
-  
+  const dispatch = useDispatch();
+
   const handleLogin = () => {
     dispatch({
       type: "toggleLogin",

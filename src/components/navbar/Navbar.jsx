@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import { Link } from 'react-router-dom'
 
 import './navbar.css'
 import LoginBtn from './LoginBtn';
+import { useSelector } from 'react-redux';
+import LogoutBtn from './LogoutBtn';
+import { loadUserReducer } from '../../Redux/global/LoadUser';
 
-const Navbar = () => {
-
+const Navbar = () => { 
+    const status = useSelector( state=>state.loadUserReducer.status );
     return (
         <>
             <nav >
@@ -17,7 +20,7 @@ const Navbar = () => {
                     <div className="navigate"><Link to="/about"><span>About</span></Link></div>
                     <div className="navigate"><Link to="/contact"><span>Contact</span></Link></div>
                 </div>
-                <LoginBtn/>
+                { status ? <LogoutBtn/> : <LoginBtn/> }
             </nav>
         </>
     )

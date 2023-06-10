@@ -103,7 +103,11 @@
 .registration-form{
     width: 80%;
     overflow: scroll;
-    justify-content: center;
+}
+
+.pure-form{
+    width: 100%;
+    overflow: scroll;
 }
 
 .registration-form::-webkit-scrollbar{

@@ -1,17 +1,23 @@
-import React, { useState } from "react";
+import React, { useState , useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import * as validator from "validator";
 
 import "./login.css";
 import img from "../../assets/images/img1.png";
 import LoginRegisterHead from "./LoginRegisterHead";
-import { toast } from "react-toastify";
 import { loginRequest } from "../../Redux/local/LoginPage";
+import { loadUser } from "../../Redux/global/LoadUser";
 
 const Login = () => {
   const dispatch = useDispatch();
-  const { loginDisplay } = useSelector((state) => state.Login);
+  const { loginDisplay , status } = useSelector((state) => state.Login);
   const [fields, setfields] = useState({ email: "", password: "" });
+
+  useEffect(()=>{
+    dispatch( loadUser() );
+    if( status == true ){
+      dispatch({ type: "toggleLogin"});
+    }
+  } , [ status ])
 
   const handleCloseBtn = () => {
     dispatch({
@@ -23,16 +29,8 @@ const Login = () => {
     setfields({ ...fields, [e.target.name]: e.target.value });
   };
 
-  const submitform = (e) => {
-    if (validator.isEmail(fields.email)) {
-      if (fields.password.length > 4) {
-        dispatch(loginRequest(fields));
-      } else {
-        toast.error("Password length atleast 4 required");
-      }
-    } else {
-      toast.error("Not Valid Email");
-    }
+  const submitform = () => {
+    dispatch(loginRequest(fields));
   };
 
   return (

@@ -1,4 +1,4 @@
-import { Provider } from "react-redux";
+import { Provider, useDispatch } from "react-redux";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 
 import Navbar from "./components/navbar/Navbar.jsx";
@@ -18,8 +18,15 @@ import Register from "./components/login/Register.jsx";
 import Admin from "./components/adminPage/Admin.jsx";
 import Userdetails from "./components/adminPage/UserDetails/Userdetails.jsx";
 import { ToastContainer } from "react-toastify";
+import { loadUser } from "./Redux/global/LoadUser.js";
+import { useEffect } from "react";
 
 function App() {
+  
+  useEffect(() => {
+    Store.dispatch(loadUser());
+  }, []);
+
   return (
     <>
       <BrowserRouter>
