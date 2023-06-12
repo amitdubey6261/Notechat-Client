@@ -9,7 +9,7 @@ import LogoutBtn from './LogoutBtn';
 import { loadUserReducer } from '../../Redux/global/LoadUser';
 
 const Navbar = () => { 
-    const status = useSelector( state=>state.loadUserReducer.status );
+    const { status } = useSelector( state=>state.loadUserReducer );
     return (
         <>
             <nav >

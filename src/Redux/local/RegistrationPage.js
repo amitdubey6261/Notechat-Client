@@ -11,7 +11,7 @@ const initialState = {
 
 export const registrationRequest = createAsyncThunk( 'user/register' , async ( fields , { rejectWithValue } ) =>{
     try{
-        const res = await axios.post( `http://localhost:5000/api/v1/user/create` , {...fields} , {...apiConfig()} ) ;
+        const res = await axios.post( `${backendUrl()}/api/v1/user/create` , {...fields} , {...apiConfig()} ) ;
         return res ; 
     }
     catch(e){

@@ -6,7 +6,10 @@ import { logoutReducer } from "./global/Logout";
 import { Login } from "./local/LoginPage";
 import { Register } from "./local/RegistrationPage";
 import { ProductPage } from "./local/ProductPage";
+import { ForgotReducer } from "./local/ForgotPage";
 import { AdminReducer, fetchAllUsers } from "./local/AdminPage";
+import { createNotesReducer } from "./local/CreateNotes";
+import { getAllNotesReducer } from "./local/GetAllNotes";
 
 const store = configureStore({
     reducer: {
@@ -18,6 +21,9 @@ const store = configureStore({
         ProductPage,
         AdminReducer,
         fetchAllUsers,
+        ForgotReducer , 
+        createNotesReducer , 
+        getAllNotesReducer , 
     },
     middleware: [
         ...getDefaultMiddleware({

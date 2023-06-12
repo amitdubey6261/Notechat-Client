@@ -7,6 +7,9 @@ import image from '../../assets/images/myimg.png'
 import Card from './cards/Card';
 
 const Collections = () => {
+
+    
+
     return (
         <>
             <main>

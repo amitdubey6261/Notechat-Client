@@ -90,13 +90,26 @@
     align-items: center;
 }
 
-.text-fields{
-    color: white;
-    padding-left: 1rem;
+.cp-form{
+    background-color: rgb(30, 30, 30);
+    border: 1px solid white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
-.submit-btn{
+.cp-form-heading{
+    color: red;
+    font-family: 'Bebas Neue';
+    font-size: 3rem;
+}
+
+.text-fields{
+    height: 1cm;
+    border: 1px solid rgba(255, 255, 255, 0);
     color: white;
-    background-color: red;
-    border: 2px solid red;
+    padding-left: 1rem;
+    background-color: black;
 }

@@ -1,20 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from 'react-redux'
 import { logout } from "../../Redux/global/Logout";
-import { loadUser } from "../../Redux/global/LoadUser";
 
-const LogoutBtn = ({toggle}) => {
+const LogoutBtn = () => {
     const dispatch = useDispatch();
-    const { status } = useSelector( (state) => state.logoutReducer ) ; 
 
     const handleLogout = () => {
         dispatch(logout());
-        location.reload();
     };
-
-    // useEffect(()=>{
-    //     dispatch(loadUser())
-    // } , [status])
 
     return (
         <>

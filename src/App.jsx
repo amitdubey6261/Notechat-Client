@@ -16,10 +16,10 @@ import Store from "./Redux/Store";
 import "./App.css";
 import Register from "./components/login/Register.jsx";
 import Admin from "./components/adminPage/Admin.jsx";
-import Userdetails from "./components/adminPage/UserDetails/Userdetails.jsx";
 import { ToastContainer } from "react-toastify";
 import { loadUser } from "./Redux/global/LoadUser.js";
 import { useEffect } from "react";
+import ForgotPassword from "./components/login/ForgotPassword.jsx";
 
 function App() {
   
@@ -48,7 +48,7 @@ function App() {
             <Login />
             <Register />
             <ProductPage />
-            {/* <Userdetails /> */}
+            <ForgotPassword/>
             <Routes>
               <Route path="/" element={<HomePage />}></Route>
               <Route path="/collection" element={<Collections />}></Route>

@@ -1,4 +1,4 @@
-import React, { useState , useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import "./login.css";
@@ -9,15 +9,15 @@ import { loadUser } from "../../Redux/global/LoadUser";
 
 const Login = () => {
   const dispatch = useDispatch();
-  const { loginDisplay , status } = useSelector((state) => state.Login);
+  const { loginDisplay, status } = useSelector((state) => state.Login);
   const [fields, setfields] = useState({ email: "", password: "" });
 
-  useEffect(()=>{
-    dispatch( loadUser() );
-    if( status == true ){
-      dispatch({ type: "toggleLogin"});
+  useEffect(() => {
+    dispatch(loadUser());
+    if (status == true) {
+      dispatch({ type: "toggleLogin" });
     }
-  } , [ status ])
+  }, [status]);
 
   const handleCloseBtn = () => {
     dispatch({
@@ -29,8 +29,15 @@ const Login = () => {
     setfields({ ...fields, [e.target.name]: e.target.value });
   };
 
-  const submitform = () => {
+  const submitform = (e) => {
+    e.preventDefault();
     dispatch(loginRequest(fields));
+  };
+
+  const toggleForgotPasswodDisplay = () => {
+    dispatch({
+      type: "toggleForgot",
+    });
   };
 
   return (
@@ -41,32 +48,37 @@ const Login = () => {
       <div className="login-content">
         <LoginRegisterHead />
         <div className="register-form">
-          <input
-            className="inp-fields"
-            placeholder="email"
-            type="email"
-            name="email"
-            id="email"
-            value={fields.email}
-            onChange={onchangeHandler}
-          />
-          <input
-            className="inp-fields"
-            placeholder="password"
-            type="password"
-            name="password"
-            id="password"
-            value={fields.password}
-            onChange={onchangeHandler}
-          />
-          <span className="forget-pass">Forgot Password</span>
-          <button
-            type="submit"
-            className="form-submit-btn"
-            onClick={submitform}
-          >
-            <span>login</span>
-          </button>
+          <form action="" className="pure-form" onSubmit={submitform}>
+            <input
+              className="inp-fields"
+              placeholder="email"
+              type="email"
+              name="email"
+              id="email"
+              value={fields.email}
+              onChange={onchangeHandler}
+            />
+            <input
+              className="inp-fields"
+              placeholder="password"
+              type="password"
+              name="password"
+              id="password"
+              value={fields.password}
+              onChange={onchangeHandler}
+            />
+            <span className="forget-pass" onClick={toggleForgotPasswodDisplay}>
+              Forgot Password
+            </span>
+            <input type="submit" value="Login" />
+            {/* <button
+              type="submit"
+              className="form-submit-btn"
+              onClick={submitform}
+            >
+              <span>login</span>
+            </button> */}
+          </form>
         </div>
       </div>
       <div className="login-image">

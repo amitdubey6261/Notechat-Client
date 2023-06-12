@@ -22,7 +22,8 @@ export const logoutReducer = createReducer( initalState , {
     }
     , 
     [logout.fulfilled] : ( state , action ) =>{
-        state.status = false ; 
+        state.status = true ; 
+        window.location.reload();
     }
     ,
     [logout.rejected] : ( state , action ) =>{
