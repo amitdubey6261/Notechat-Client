@@ -3,6 +3,7 @@
     height: 70vh;
     position: relative;
     margin-top: 1rem;
+    display: flex;
 }
 
 .card-image{
@@ -10,32 +11,52 @@
     height: 100%;
     object-fit:cover;
     object-position: center;
-    border-radius: 1rem;
-
 }
 
 .card-overlay{
     width: 100%;
-    height: 100%;
     position: absolute;
-    top: 0;
-    left: 0;
+    bottom: 0;
     background-color: rgba(0, 0, 0, 0);
     color: white;
     display: flex;
     transition: all 1s ease;
-    border-radius: 20px;
-    justify-content: center;
     align-items: flex-end;
+    z-index: 3;
 }
 
-.card-overlay:hover{
-    background-color: rgba(7, 7, 7, 0.534);
+.card-info-container{
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 2cm;
+    overflow: scroll;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.card-text{
-    font-family: 'Gruppo', cursive;
+.marq{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cic-info{
+    height: 4cm;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;    
+}
+
+.cic-info-text{
     color: white;
-    font-size: 1.5rem;
-    transform: translate(  0% , -50%);
+    font-size: 1rem;
+    list-style-type: none;
+    font-family: 'Bebas Neue';
+}
+
+.info-text-head{
+    color: red;
+    font-family: 'Bebas Neue';
 }

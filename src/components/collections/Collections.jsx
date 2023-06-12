@@ -1,14 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import './Collections.css'
 
 import image from '../../assets/images/myimg.png'
 
 import Card from './cards/Card';
+import { useDispatch, useSelector } from 'react-redux';
+import { getAllNotes } from '../../Redux/local/GetAllNotes';
 
 const Collections = () => {
 
-    
+    const dispatch = useDispatch() ;
+
+    const { res , status } = useSelector( state=>state.getAllNotesReducer );
+
+    useEffect(()=>{
+        dispatch(getAllNotes());
+        console.log( res , status );
+    } , [])
 
     return (
         <>
@@ -41,19 +50,13 @@ const Collections = () => {
                     <div ><span className="heading">COLLECTION</span></div>
                     <div ><span className="sub-heading">Everything you need for your fitness journey is right here</span></div>
                     <div className="card-container">
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                </div>
+                        { status ?
+                        (
+                            res.data.notes.map(( elem , idx ) => <Card key={elem._id} props={ elem } />)
+                        )
+                        : ( <p> NO DATA FOUND </p> )
+                        }
+                    </div>
                 </div>
             </main>
         </>

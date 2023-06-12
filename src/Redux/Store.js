@@ -10,21 +10,24 @@ import { ForgotReducer } from "./local/ForgotPage";
 import { AdminReducer, fetchAllUsers } from "./local/AdminPage";
 import { createNotesReducer } from "./local/CreateNotes";
 import { getAllNotesReducer } from "./local/GetAllNotes";
+import { getProductDetailsReducer } from "./local/GetProductDetails";
 
 const store = configureStore({
     reducer: {
         loader,
-        loadUserReducer , 
         Login,
-        logoutReducer ,
         Register,
         ProductPage,
-        AdminReducer,
         fetchAllUsers,
+        AdminReducer,
+        logoutReducer ,
         ForgotReducer , 
+        loadUserReducer , 
         createNotesReducer , 
         getAllNotesReducer , 
-    },
+        getProductDetailsReducer ,
+    }
+    ,
     middleware: [
         ...getDefaultMiddleware({
             serializableCheck: false,
