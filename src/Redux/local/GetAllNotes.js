@@ -8,9 +8,15 @@ const initalState = {
     error : null , 
 }
 
-export const getAllNotes = createAsyncThunk( 'notes/all' , async( _ , {rejectWithValue}) =>{
+export const getAllNotes = createAsyncThunk( 'notes/all' , async( fields , {rejectWithValue}) =>{
     try{
-        const res = await axios.get( `${backendUrl()}/api/v1/notes/all` , {...apiConfig()} ) ; 
+        let res = undefined ; 
+        if( fields == undefined ){
+            res = await axios.get( `${backendUrl()}/api/v1/notes/all` ) ; 
+        }
+        else{
+            res = await axios.get( `${backendUrl()}/api/v1/notes/all?keyword=${fields.keyword}&category=${fields.category}&page=${fields.page}` , {...apiConfig()} ) ; 
+        }
         return res; 
     }
     catch(e){

@@ -10,7 +10,6 @@ const initialState = {
 
 export const getProductDetails = createAsyncThunk( 'product/getdetails' , async( fields , {rejectWithValue})=>{
     try{
-        console.log( fields );
         const res = await axios.get(`${backendUrl()}/api/v1/notes/${fields}` , {...apiConfig()}) ; 
         return res ; 
     }

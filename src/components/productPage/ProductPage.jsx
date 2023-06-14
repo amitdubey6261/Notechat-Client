@@ -1,7 +1,5 @@
 import React from "react";
 
-import img from "../../assets/images/img1.png";
-
 import "./ProductPage.css";
 import { useDispatch, useSelector } from "react-redux";
 

@@ -15,9 +15,11 @@ const CreateNote = () => {
 
     const [fields, setfields] = useState({
         subject: "",
+        price: 0,
         faculty: "",
         aboutpdf: "",
         index: "",
+        category : "" , 
         thumbnail1 : null , 
         thumbnail2 : null , 
         thumbnail3 : null , 
@@ -297,6 +299,22 @@ const CreateNote = () => {
                                 placeholder="faculty"
                                 name="faculty"
                                 value={fields.faculty}
+                                onChange={handleFormChange}
+                            />
+                            <input
+                                className="text-fields"
+                                type="number"
+                                placeholder="price"
+                                name="price"
+                                value={fields.price}
+                                onChange={handleFormChange}
+                            />
+                            <input
+                                className="text-fields"
+                                type="text"
+                                placeholder="category"
+                                name="category"
+                                value={fields.category}
                                 onChange={handleFormChange}
                             />
                             <textarea

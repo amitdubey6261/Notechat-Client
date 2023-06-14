@@ -1,9 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import './formPage.css';
+import { useDispatch } from 'react-redux';
+import { sendMail } from '../../Redux/local/contactPage';
 
 
 const FormPage = () => {
+    const dispatch = useDispatch();
+    const [ fields , setfields ] = useState({
+        name : "" , 
+        email : "" , 
+        contact : "" , 
+        query : "" , 
+    })
+
+    const handleFormSubmit = (e) =>{
+        e.preventDefault();
+        dispatch(sendMail(fields));
+    }
+
+    const handleFormChange = (e) =>{
+        setfields({ ...fields , [e.target.name] : e.target.value });
+    }
+
+
     return (
         <>
             <div className='form-container'>
@@ -41,15 +61,15 @@ const FormPage = () => {
                     </div>
                 </div>
                 <div className="form-section-right">
-                    <div className="form-container">
-                        <form action="">
+                    <div className="form-container" onSubmit={handleFormSubmit}>
+                        <form id='aboutForm' action="">
                             <div className='overlay-t'>CONTACT</div>
                             <div > <span className='overlay-t-2'>SEND ME A MESSAGE</span></div>
-                            <input className='inp-fields' type="text" name="name" id="name" placeholder='Enter Name' />
-                            <input className='inp-fields' type="email" name="name" id="name" placeholder='Enter Email' />
-                            <input className='inp-fields' type="number" name="name" id="name" placeholder='Enter Contact' />
-                            <textarea  placeholder='Type Here' className=' inp-fields text-area' name="explain" id="" cols="30" rows="10"></textarea>
-                            <button type='submit' className='form-submit-btn'><span>Submit</span></button>
+                            <input className='inp-fields' onChange={handleFormChange} value={fields.name} type="text" name="name" id="name" placeholder='Enter Name' />
+                            <input className='inp-fields' onChange={handleFormChange} value={fields.email} type="email" name="email" id="name" placeholder='Enter Email' />
+                            <input className='inp-fields' onChange={handleFormChange} value={fields.contact} type="number" name="contact" id="name" placeholder='Enter Contact' />
+                            <textarea  placeholder='Type Here' onChange={handleFormChange} value={fields.query} className=' inp-fields text-area' name="query" id="" cols="30" rows="10"></textarea>
+                            <input type="submit" value="Submit" />
                         </form>
                     </div>
                 </div>

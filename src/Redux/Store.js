@@ -11,6 +11,8 @@ import { AdminReducer, fetchAllUsers } from "./local/AdminPage";
 import { createNotesReducer } from "./local/CreateNotes";
 import { getAllNotesReducer } from "./local/GetAllNotes";
 import { getProductDetailsReducer } from "./local/GetProductDetails";
+import { getAllMailReducer , sendEmailReducer } from "./local/contactPage";
+import { QueryFormReducer } from "./local/QueryForm";
 
 const store = configureStore({
     reducer: {
@@ -18,11 +20,14 @@ const store = configureStore({
         Login,
         Register,
         ProductPage,
-        fetchAllUsers,
         AdminReducer,
-        logoutReducer ,
+        fetchAllUsers,
         ForgotReducer , 
+        logoutReducer ,
         loadUserReducer , 
+        QueryFormReducer , 
+        sendEmailReducer , 
+        getAllMailReducer , 
         createNotesReducer , 
         getAllNotesReducer , 
         getProductDetailsReducer ,
