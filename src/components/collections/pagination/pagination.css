@@ -1,0 +1,30 @@
+.pagination-wrapper{
+    display: flex;
+    border: 1px solid black;
+    width: 5cm;
+    height: 1cm;
+    margin: 2rem;
+}
+
+.p-child{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#left-box{
+    background-color: red ;
+}
+
+#right-box{
+    background-color: red ;
+}
+
+#number-field{
+    background-color: white;
+    font-size: 1rem;
+    font-family: 'Bebas Neue';
+    border-left: 1px solid black ; 
+    border-right: 1px solid black;
+}

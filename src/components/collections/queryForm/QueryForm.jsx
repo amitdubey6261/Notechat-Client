@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { BsSearch, BsFillPenFill } from "react-icons/bs/index";
 import { FaRegStickyNote } from "react-icons/fa/index";
-import "./queryform.css";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllNotes } from "../../../Redux/local/GetAllNotes";
-import { QueryFormReducer } from "../../../Redux/local/QueryForm";
+
+import "./queryform.css";
 
 const QueryForm = () => {
     const dispatch = useDispatch();
-    const values = useSelector(state=>state.QueryFormReducer) ; 
+    const values = useSelector((state) => state.QueryFormReducer);
 
     const iconstyle = {
         width: "1cm",
@@ -17,32 +17,32 @@ const QueryForm = () => {
         right: "5%",
     };
 
-    const [fields , setfields] = useState({
-        keyword : "" , 
-        category : 'notes' , 
-        page : 1 , 
-    })
+    const [fields, setfields] = useState({
+        keyword: "",
+        category: "notes",
+        page: 1,
+    });
 
-    const handleFormChange = (e) =>{
-        console.log( e.target.value )
-        setfields({ ...fields , [e.target.name] : e.target.value });
-    }
+    const handleFormChange = (e) => {
+        console.log(e.target.value);
+        setfields({ ...fields, [e.target.name]: e.target.value });
+    };
 
-    const handleFormSubmit = (e) =>{
+    const handleFormSubmit = (e) => {
         e.preventDefault();
 
         dispatch({
-            type : "setKeyWord" , 
-            payload : fields.keyword , 
-        })
+            type: "setKeyWord",
+            payload: fields.keyword,
+        });
 
         dispatch({
-            type : "setCategory" , 
-            payload : fields.category , 
-        })
+            type: "setCategory",
+            payload: fields.category,
+        });
 
         dispatch(getAllNotes(values));
-    }
+    };
 
     return (
         <>
@@ -61,7 +61,12 @@ const QueryForm = () => {
                     </div>
                     <div className="qf-childs other-filters">
                         <FaRegStickyNote style={iconstyle} />
-                        <select name="category" value={fields.category} onChange={handleFormChange} className="category" >
+                        <select
+                            name="category"
+                            value={fields.category}
+                            onChange={handleFormChange}
+                            className="category"
+                        >
                             <option value="notes">notes</option>
                             <option value="test paper">test paper</option>
                         </select>

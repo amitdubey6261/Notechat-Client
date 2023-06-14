@@ -8,6 +8,7 @@ import Card from "./cards/Card";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllNotes } from "../../Redux/local/GetAllNotes";
 import QueryForm from "./queryForm/QueryForm";
+import Pagination from "./pagination/Pagination";
 
 const Collections = () => {
     const dispatch = useDispatch();
@@ -63,6 +64,7 @@ const Collections = () => {
                             <p> NO DATA </p>
                         )}
                     </div>
+                    <Pagination/>
                 </div>
             </main>
         </>
