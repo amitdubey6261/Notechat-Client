@@ -6,7 +6,6 @@ nav{
     justify-content: space-around;
     align-items: center;
     background-color: black;
-
 }
 
 .nav-o-c{
@@ -36,6 +35,17 @@ span{
     border: 2px solid red;
 }
 
+#logout-box{
+    background-color: red;
+    width: 90%;
+    height: 1cm;
+    color: white;
+    font-family: 'Sora';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .btn{
     margin-top: 10px;
 }
@@ -44,4 +54,27 @@ span{
     color: white;
     text-decoration: none;
     text-transform: uppercase;
+}
+
+.LoginBtn-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3cm;
+}
+
+.LoginOpener{
+    background-color: white;
+}
+
+.userOptions{
+    background-color: wheat;
+    width: 30%;
+} 
+
+.l-opener{
+    background-color: rgb(255, 255, 255);
+    height: 1cm;
+    display: flex;
+    align-items: center;
 }

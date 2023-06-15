@@ -1,0 +1,39 @@
+.pdf-conatiner{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    align-items: center;
+    height: 120vh;
+    margin: 5rem;
+    border: 10px solid black;
+    background-color: black;
+}
+
+.pdf-wrapper{   
+    max-height: 110vh;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}   
+
+.pdfPagination-wrapper{
+    background-color: red ; 
+    width: 3cm;
+    height: 1cm;
+    display: flex;
+}
+
+.p-p-child{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pdfPagination-left{
+    background-color: rgb(106, 106, 106);
+}
+
+.pdfPagination-right{   
+    background-color: rgb(120, 120, 120);
+}

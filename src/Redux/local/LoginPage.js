@@ -1,7 +1,6 @@
 import { createReducer , createAsyncThunk } from "@reduxjs/toolkit";
 import { toast } from 'react-toastify'
 import axios from 'axios' ; 
-import Cookies from "js-cookie";
 import { apiConfig, backendUrl, handleApiError } from "../../static";
 
 const initialState = {

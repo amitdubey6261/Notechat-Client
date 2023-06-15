@@ -52,7 +52,7 @@ const Collections = () => {
                     </div>
                     <div>
                         <span className="sub-heading">
-                            Everything you need for your fitness journey is right here
+                            Everything you need for your learning journey is right here
                         </span>
                     </div>
                     <div className="card-container">

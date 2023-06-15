@@ -6,7 +6,6 @@ import './navbar.css'
 import LoginBtn from './LoginBtn';
 import { useSelector } from 'react-redux';
 import LogoutBtn from './LogoutBtn';
-import { loadUserReducer } from '../../Redux/global/LoadUser';
 
 const Navbar = () => { 
     const { status } = useSelector( state=>state.loadUserReducer );

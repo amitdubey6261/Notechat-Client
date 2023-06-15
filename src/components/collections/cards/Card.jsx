@@ -4,17 +4,18 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import { useDispatch } from "react-redux";
 import { getProductDetails } from "../../../Redux/local/GetProductDetails";
+import { useNavigate } from "react-router-dom";
 
 const Card = ( {props} ) => {
   
   const dispatch = useDispatch(); 
+  const navigate = useNavigate();
 
   const handleCardClick = () => {
     dispatch(getProductDetails(props._id));
 
-    dispatch({
-      type: "toggleProduct",
-    });
+    navigate("/product");
+    
   };
 
   const arrorStyle = {
@@ -23,7 +24,7 @@ const Card = ( {props} ) => {
 
   return (
     <>
-      <div className="card" onDoubleClick={handleCardClick}>
+      <div className="card" onClick={handleCardClick}>
         <Swiper
           spaceBetween={0}
           slidesPerView={1}

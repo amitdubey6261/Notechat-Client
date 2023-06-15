@@ -8,7 +8,6 @@ import AboutPage from "./components/aboutPage/AboutPage.jsx";
 import ContactPage from "./components/contactPage/ContactPage.jsx";
 import Footer from "./components/footer/Footer.jsx";
 import Login from "./components/login/Login.jsx";
-import ProductPage from "./components/productPage/ProductPage.jsx";
 import CreateNote from "./components/createProduct/CreateNote.jsx";
 
 import Store from "./Redux/Store";
@@ -20,6 +19,11 @@ import { ToastContainer } from "react-toastify";
 import { loadUser } from "./Redux/global/LoadUser.js";
 import { useEffect } from "react";
 import ForgotPassword from "./components/login/ForgotPassword.jsx";
+import InfoHeader from "./components/InfoHeader/InfoHeader.jsx";
+import OrderPage from "./components/OrderPage/OrderPage.jsx";
+import PdfViewer from "./components/pdfViewer/pdfViewer.jsx";
+import ProductPage from "./components/productPage/ProductPage.jsx";
+import Mycart from "./components/mycart/Mycart.jsx";
 
 function App() {
   
@@ -47,8 +51,8 @@ function App() {
             <Navbar />
             <Login />
             <Register />
-            <ProductPage />
             <ForgotPassword/>
+            <InfoHeader/>
             <Routes>
               <Route path="/" element={<HomePage />}></Route>
               <Route path="/collection" element={<Collections />}></Route>
@@ -56,6 +60,10 @@ function App() {
               <Route path="/contact" element={<ContactPage />}></Route>
               <Route path="/create" element={<CreateNote />}></Route>
               <Route path="/admin" element={<Admin />}></Route>
+              <Route path="/orders" element={<OrderPage/>}></Route>
+              <Route path="/pdf" element={<PdfViewer/>}></Route>
+              <Route path='/product' element={<ProductPage/>}></Route>
+              <Route path='/cart' element={<Mycart/>}></Route>
             </Routes>
             <Footer />
           </Provider>

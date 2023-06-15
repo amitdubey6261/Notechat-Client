@@ -1,0 +1,38 @@
+.myCartContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Cards-container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mycart-heading{
+    color: white;
+    font-family: 'Bebas Neue';
+    font-size: 4rem;
+}
+
+.card-agregator-container{
+    display: flex;
+    width: 80%;
+}
+
+.Cards-container{
+    width: 70%;
+}
+
+.agregator-conatainer{
+    background-color: rgb(33, 33, 33);
+    height: 8cm;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
