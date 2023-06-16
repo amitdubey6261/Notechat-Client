@@ -18,6 +18,7 @@ export const getAllNotes = createAsyncThunk( 'notes/all' , async( fields , {reje
             res = await axios.get( `${backendUrl()}/api/v1/notes/all?keyword=${fields.keyword}&category=${fields.category}&page=${fields.page}` , {...apiConfig()} ) ; 
         }
         return res; 
+        // console.log( res )
     }
     catch(e){
         return handleApiError( e , rejectWithValue );

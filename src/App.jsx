@@ -24,6 +24,7 @@ import OrderPage from "./components/OrderPage/OrderPage.jsx";
 import PdfViewer from "./components/pdfViewer/pdfViewer.jsx";
 import ProductPage from "./components/productPage/ProductPage.jsx";
 import Mycart from "./components/mycart/Mycart.jsx";
+import MyNotes from "./components/myNotes/MyNotes.jsx";
 
 function App() {
   
@@ -64,6 +65,7 @@ function App() {
               <Route path="/pdf" element={<PdfViewer/>}></Route>
               <Route path='/product' element={<ProductPage/>}></Route>
               <Route path='/cart' element={<Mycart/>}></Route>
+              <Route path="/myNotes" element={<MyNotes/>}></Route>
             </Routes>
             <Footer />
           </Provider>

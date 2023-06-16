@@ -1,42 +1,50 @@
-.Crad-wrapper{
-    width: 70% ;
+.Crad-wrapper {
+    width: 70%;
     height: 8cm;
-    background-color: rgb(67, 67, 67);
+    background-color: rgb(164, 164, 164);
     display: flex;
     position: relative;
     margin-top: 1rem;
 }
 
-.cart-card-img{
+.cart-card-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.cart-card-left-section{
+.cart-card-left-section {
     overflow: hidden;
     width: 30%;
     height: 100%;
 }
 
-.cart-card-right-section{
-
+.cart-card-right-section {
+    width: 100%;
+    display: flex;
 }
 
-.cart-card-details{
-
+.cart-card-details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-between;
 }
 
-.cc-details-text{
+.cc-details-text {
     font-size: 2rem;
     margin-left: 2rem;
+    margin-right: 5rem;
     font-family: 'Bebas Neue';
+    display: flex;
+    justify-content: space-between;
 }
 
-.clear-cc{
+.clear-cc {
     position: absolute;
-    top : 0 ; 
-    right : 0 ; 
+    top: 0;
+    right: 0;
     font-size: 2rem;
     margin-right: 1rem;
     color: white;

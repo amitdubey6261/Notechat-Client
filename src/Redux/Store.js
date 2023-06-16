@@ -13,6 +13,10 @@ import { getAllNotesReducer } from "./local/GetAllNotes";
 import { getProductDetailsReducer } from "./local/GetProductDetails";
 import { getAllMailReducer , sendEmailReducer } from "./local/contactPage";
 import { QueryFormReducer } from "./local/QueryForm";
+import { insertCartReducer } from "./local/InsertCart";
+import { getAllFromCartReducer } from "./local/getAllCart";
+import { deleteFromCartReducer } from "./local/deleteFromCart";
+import { RazorOrderReducer  } from "./local/RazorOrder";
 
 const store = configureStore({
     reducer: {
@@ -31,6 +35,10 @@ const store = configureStore({
         createNotesReducer , 
         getAllNotesReducer , 
         getProductDetailsReducer ,
+        insertCartReducer , 
+        getAllFromCartReducer , 
+        deleteFromCartReducer  , 
+        RazorOrderReducer , 
     }
     ,
     middleware: [

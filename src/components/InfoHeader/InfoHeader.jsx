@@ -2,7 +2,8 @@ import React from "react";
 import "./infoheader.css";
 import { Link } from "react-router-dom";
 import { FaBoxes, FaPen, FaUserCircle } from "react-icons/fa";
-import { BsFillBoxFill , BsCartFill } from "react-icons/bs";
+import { BsFillBookFill , BsCartFill  } from "react-icons/bs";
+
 import img from '../../assets/images/myimg2.png'; 
 import { useSelector } from "react-redux";
 
@@ -30,21 +31,22 @@ const InfoHeader = () => {
                         
                     </Link>
                 </div>
-                <div className="info-head-child info-your-profile">
-                    <Link to="/cart">
-                        < BsCartFill style={iconStyle} />
-                        
-                    </Link>
-                </div>
                 <div className="info-head-child info-your-orders">
-                    <Link to="/orders">
-                        < BsFillBoxFill style={iconStyle}/>
+                    {/* <Link to="/orders"> ---------------------------------------------------------------------? */}
+                    <Link to="/myNotes">
+                        < BsFillBookFill style={iconStyle}/>
                         
                     </Link>
                 </div>
                 <div className="info-head-child info-create-product">
                     <Link to="/create">
                         < FaPen style={iconStyle}/>
+                        
+                    </Link>
+                </div>
+                <div className="info-head-child info-your-profile">
+                    <Link to="/cart">
+                        < BsCartFill style={iconStyle} />
                         
                     </Link>
                 </div>

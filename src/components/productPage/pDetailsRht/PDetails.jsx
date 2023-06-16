@@ -1,6 +1,25 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { insertInCart } from "../../../Redux/local/InsertCart";
 
 const PDetails = ({res}) => {
+    const dispatch = useDispatch() ; 
+    const status = useSelector(state=>state.loadUserReducer.status) ; 
+    const userRes = useSelector(state=>state.loadUserReducer.res) ; 
+
+    const addTocart = () =>{    
+        if( status ){
+            const payload = {} ;  
+            payload.price = res.data.notes.price ; 
+            payload.collage = res.data.notes.collage ; 
+            payload.rating = res.data.notes.rating ; 
+            // payload.type = res.data.notes.type ; 
+            payload.productid = res.data.notes._id ; 
+            payload.userid = userRes.data.user._id ; 
+    
+            dispatch(insertInCart(payload));
+        }
+    }
     return (
         <>
             <div className="pDetails-wrapper">
@@ -23,7 +42,7 @@ const PDetails = ({res}) => {
                     </div>
                 </div>
                 <div className="btn-wrapper">
-                    <button className="buy-notes-btn">buy now</button>
+                    <button onClick={addTocart} className="buy-notes-btn">Add to Cart</button>
                 </div>
                 <div className="btm-box">
                     <div className="PDetails" id="Pdetail5">
@@ -55,7 +74,7 @@ const PDetails = ({res}) => {
                         Review
                     </div>
                     <div className="PDetails" id="Pdetail11">
-                        <div className="smaill-headings">CreatedBy <span className="pdspans"> Amit Dubey</span></div>
+                        <div className="smaill-headings">CreatedBy <span className="pdspans">{res.data.notes.createdby}</span></div>
                     </div>
                 </div>
             </div>
