@@ -10,15 +10,16 @@ import { getAllFromCart } from '../../Redux/local/getAllCart';
 const Mycart = () => {
     const dispatch = useDispatch()
     const { status , res } = useSelector( state=>state.getAllFromCartReducer ) ; 
-    const dstatus = useSelector(state=>state.deleteFromCartReducer.status )
-
-    if( status ) res.data.cards.map(( e , idx)=>{
-        console.log(e)
-    })
-
+    const dstatus = useSelector(state=>state.deleteFromCartReducer.status ) ; 
+    const userLoadedStatus = useSelector( state=>state.loadUserReducer.status) ;
+    const Userres = useSelector( state=>state.loadUserReducer.res ); 
+    
     useEffect(()=>{
-        dispatch( getAllFromCart() )
-    } , [dstatus])
+        if( userLoadedStatus ){
+            const uid = Userres.data.user._id ; 
+            dispatch( getAllFromCart({ uid }) );
+        }
+    } , [userLoadedStatus,dstatus])
 
     return (
         <>
@@ -34,12 +35,19 @@ const Mycart = () => {
                         </div>
                     </div>
                 </div>
-                <div style={{fontSize : '4rem'}}className="heading">MY CART</div>
+                <h1 className='mycart-heading'>CART</h1>
                 <div className="myCartContainer">
                     <div className="Cards-container">
-                        { status && res.data.cards.map((elem , idx)=>< CartCard data={elem} key={elem._id}/>)}
+                        {
+                            status &&
+                            res.data.cartProducts.map((elem , idx)=> <CartCard userid={Userres.data.user._id} data={elem} key={elem._id}/> )
+                        }
                     <div className="agregator-conatainer">
-                        { status && <Aggregator bill={res.data.totalBill} data={res.data.cards}/> }
+                        {/* { status && <Aggregator bill={res.data.totalBill} data={res.data.cards}/> } */}
+                        {
+                            status && 
+                            <Aggregator data={res} />
+                        }
                     </div>
                     </div>
                 </div>

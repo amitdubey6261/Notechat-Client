@@ -22,7 +22,7 @@ const Collections = () => {
 
     return (
         <>
-            <main>
+            <main style={{backgroundColor:'black'}}>
                 <div className="image-wrapper">
                     <img id="image" src={image} alt="not-found" />
                     <div className="image-overlay">

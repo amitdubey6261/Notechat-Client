@@ -1,6 +1,7 @@
 .Product-page-container{
     display: flex;  
     height: 100vh;
+    background-color: rgb(27, 25, 25);
 }
 
 .pp-left-section{
@@ -8,6 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgb(27, 25, 25);
 }
 
 .pp-right-section{
@@ -70,6 +72,7 @@
     min-height: 100%;
     background-color: rgb(244, 244, 244);
     padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 #Pdetail1 , #Pdetail6 , #Pdetail7 , #Pdetail9 , #Pdetail10{
@@ -106,4 +109,11 @@
 .pdspans{
     color: black;
     text-transform: lowercase;
+}
+
+.pp-page-heading{
+    color: white;
+    background-color: rgb(27, 25, 25);
+    font-family: 'Bebas Neue';
+    font-size: 3rem;
 }

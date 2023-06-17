@@ -8,9 +8,9 @@ const initialState = {
     error : null , 
 }
 
-export const getAllFromCart = createAsyncThunk( 'Cart/all' , async( _ , {rejectWithValue})=>{
+export const getAllFromCart = createAsyncThunk( 'Cart/all' , async( fields , {rejectWithValue})=>{
     try{
-        const res = axios.get( `${backendUrl()}/api/v1/cart/getAll` , {...apiConfig()} );
+        const res = axios.get( `${backendUrl()}/api/v1/cart/getAll/${fields.uid}` , {...apiConfig()} );
         return res ; 
     }
     catch(e){

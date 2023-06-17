@@ -1,15 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./cartCard.css";
 
 import img from "../../../assets/images/myimg3.png";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { deleteFromCart } from "../../../Redux/local/deleteFromCart";
 
-const CartCard = ({data}) => {
+const CartCard = ({data , userid}) => {
     const dispatch = useDispatch() ; 
 
     const deleteCard =() =>{
-        dispatch( deleteFromCart(data._id) ) ; 
+        const payload = {} ; 
+        payload.uid = userid ;
+        payload.pid =  data.productid ; 
+        dispatch( deleteFromCart(payload) ) ; 
     }
 
     return (
@@ -22,23 +25,19 @@ const CartCard = ({data}) => {
                     <div className="cart-card-details">
                         <div className="cc-details-text">
                             <div className="cc-details-attribute">price</div>
-                            <div className="cc-details-val">{data.price}</div>
+                            <div className="cc-details-val">{ data.price }</div>
                         </div>
-                        {/* <div className="cc-details-text">
-                            <div className="cc-details-attribute">collage</div>
-                            <div className="cc-details-val">{data.collage}</div>
-                        </div> */}
                         <div className="cc-details-text">
                             <div className="cc-details-attribute">subject</div>
-                            <div className="cc-details-val">{data.subject}</div>
+                            <div className="cc-details-val">{ data.subject}</div>
                         </div>
                         <div className="cc-details-text">
-                            <div className="cc-details-attribute">type</div>
-                            <div className="cc-details-val">{data.type}</div>
+                            <div className="cc-details-attribute">collage</div>
+                            <div className="cc-details-val">{ data.collage}</div>
                         </div>
                         <div className="cc-details-text">
                             <div className="cc-details-attribute">rating</div>
-                            <div className="cc-details-val">{data.rating}</div>
+                                <div className="cc-details-val">{ data.rating}</div>
                         </div>
                     </div>
                 </div>

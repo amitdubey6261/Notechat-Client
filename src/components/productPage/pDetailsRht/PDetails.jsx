@@ -9,14 +9,14 @@ const PDetails = ({res}) => {
 
     const addTocart = () =>{    
         if( status ){
-            const payload = {} ;  
+            const payload = {} ; 
+            payload.uid = userRes.data.user._id ; 
+            payload.pid = res.data.notes._id ;
             payload.price = res.data.notes.price ; 
-            payload.collage = res.data.notes.collage ; 
-            payload.rating = res.data.notes.rating ; 
-            // payload.type = res.data.notes.type ; 
-            payload.productid = res.data.notes._id ; 
-            payload.userid = userRes.data.user._id ; 
-    
+            payload.subject = res.data.notes.subject ; 
+            payload.collage =  res.data.notes.collage ;
+            payload.rating =  res.data.notes.rating ;
+            console.log( payload );
             dispatch(insertInCart(payload));
         }
     }

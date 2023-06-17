@@ -10,6 +10,7 @@ const ProductPage = () => {
     const { status , res } = useSelector(state=>state.getProductDetailsReducer) ;  
     return (
         <>
+            <h1 className='pp-page-heading'>PRODUCT VIEW</h1>
             <div className="Product-page-container">
                 <div className="pp-left-section">
                     { status && <ThumbsPP res={res}/>}

@@ -10,7 +10,7 @@ const initialState = {
 
 export const deleteFromCart = createAsyncThunk( 'cart/delete' , async(fields , {rejectWithValue})=>{
     try{
-        const res = await axios.delete( `${backendUrl()}/api/v1/cart/delete/${fields}` ,  {...apiConfig()}) ; 
+        const res = await axios.delete( `${backendUrl()}/api/v1/cart/delete/${fields.uid}/${fields.pid}` ,  {...apiConfig()}) ; 
         return res ; 
     }
     catch(e){

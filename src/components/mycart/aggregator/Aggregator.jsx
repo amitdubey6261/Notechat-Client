@@ -5,14 +5,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { createRazorOrder } from "../../../Redux/local/RazorOrder";
 import { backendUrl } from "../../../static";
 import useRazorpay from "react-razorpay";
+import { getProductDetails, getProductDetailsReducer } from "../../../Redux/local/GetProductDetails";
 
-const Aggregator = ({ bill }) => {
-
-  let [total, setTotal] = useState(0);
-
-  useEffect(() => {
-    setTotal(bill + 10);
-  }, []);
+const Aggregator = ({data : {data}}) => {
 
   const paymentHandler = () => {
 
@@ -31,7 +26,7 @@ const Aggregator = ({ bill }) => {
         contact: "9000090000" 
       },
       notes: {
-        user : "hihihihihs",
+        user : "xd",
       },
       theme: {
         color: "#ff0000"
@@ -43,17 +38,15 @@ const Aggregator = ({ bill }) => {
     razor.on('payment.failed' , (e)=>{
       console.log('hiiiii , ' , e );
     })
-
     razor.open();
-
-
   }
 
   const dispatch = useDispatch();
   const RazorPay = useRazorpay(); 
   
   const checkout = () => {
-    dispatch(createRazorOrder({ price: total }));
+    const totalBill = Number(data.totalBill ); 
+    dispatch(createRazorOrder({ price : totalBill}));
   };
   
   const { status , res } = useSelector(state=>state.RazorOrderReducer) ; 
@@ -68,7 +61,7 @@ const Aggregator = ({ bill }) => {
         <div className="heading">total</div>
         <div className="attribute">
           <div className="key">subtotal amount</div>
-          <div className="val">{bill}</div>
+          <div className="val">{data.totalBill}</div>
         </div>
         <div className="attribute">
           <div className="key">platform charges</div>
@@ -81,7 +74,7 @@ const Aggregator = ({ bill }) => {
         <hr className="cart-rule" />
         <div className="attribute">
           <div className="key">total amount</div>
-          <div className="val">{total}</div>
+          <div className="val">{data.totalBill}</div>
         </div>
         <button className="checlkout-btn" onClick={checkout} type="submit">
           CHECKOUT
