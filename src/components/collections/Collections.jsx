@@ -47,13 +47,11 @@ const Collections = () => {
                 </div>
                     <QueryForm/>
                 <div className="elements-space">
-                    <div>
-                        <span className="heading">COLLECTION</span>
+                    <div className="collection-heading">
+                        COLLECTION
                     </div>
-                    <div>
-                        <span className="sub-heading">
+                    <div className="collection-quote">
                             Everything you need for your learning journey is right here
-                        </span>
                     </div>
                     <div className="card-container">
                         {status ? (

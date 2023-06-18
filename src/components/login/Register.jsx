@@ -173,7 +173,7 @@ const Register = () => {
                             type="text"
                             placeholder="UPI ID"
                         />
-                        <input type="submit" value="Register" />
+                        <input className="login-btn" type="submit" value="Register" />
                     </form>
                 </div>
             </div>

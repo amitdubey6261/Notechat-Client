@@ -3,9 +3,12 @@ import { Document, Page, pdfjs } from "react-pdf";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 import "./pdfViewer.css";
 import PdfPagination from "./PdfPagination";
+import { useSelector } from "react-redux";
 
 function MyApp() {
   const [numPages, setNumPages] = useState(null);
+  const { urlToPdf }= useSelector(state=>state.setPdfReducer) ; 
+  console.log( urlToPdf )
 
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
@@ -28,7 +31,7 @@ function MyApp() {
   return (
     <div className="pdf-conatiner">
       <div className="pdf-wrapper">
-        <Document file={pdf} onLoadSuccess={onDocumentLoadSuccess}> 
+        <Document file={urlToPdf} onLoadSuccess={onDocumentLoadSuccess}> 
           <Page pageNumber={page}/>
         </Document>
       </div>

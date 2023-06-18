@@ -1,11 +1,11 @@
 .Product-page-container{
     display: flex;  
-    height: 100vh;
-    background-color: rgb(27, 25, 25);
+    justify-content: center;
+    align-items: center;
 }
 
 .pp-left-section{
-    width: 60%;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,8 +13,7 @@
 }
 
 .pp-right-section{
-    width: 40%;
-    margin-right: 10%;
+    width: 50%;
     overflow: scroll;
 }
 
@@ -34,7 +33,7 @@
 .pp-crousal-img{
     width: 100%;
     height: 18cm; 
-    object-fit:fill;
+    object-fit:cover;
     object-position: center;
 }
 
@@ -116,4 +115,25 @@
     background-color: rgb(27, 25, 25);
     font-family: 'Bebas Neue';
     font-size: 3rem;
+}
+
+.pp-main-c{
+    overflow: scroll;
+}
+
+@media(max-width : 600px){
+    .Product-page-container{
+        flex-direction: column;
+    }
+    .pp-left-section{
+        width: 100%;
+    }
+    .pp-right-section{
+        padding: 2rem;
+        width: 100%;
+        
+    }
+    .thumbsWrapper{
+        width: 80%;
+    }
 }

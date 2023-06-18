@@ -17,6 +17,8 @@ import { insertCartReducer } from "./local/InsertCart";
 import { getAllFromCartReducer } from "./local/getAllCart";
 import { deleteFromCartReducer } from "./local/deleteFromCart";
 import { RazorOrderReducer  } from "./local/RazorOrder";
+import { setPdfReducer } from "./local/pdfPage";
+import { deleteUserReducer } from "./local/deleteReducer";
 
 const store = configureStore({
     reducer: {
@@ -26,12 +28,14 @@ const store = configureStore({
         ProductPage,
         AdminReducer,
         fetchAllUsers,
+        setPdfReducer,
         ForgotReducer , 
         logoutReducer ,
         loadUserReducer , 
         sendEmailReducer , 
         QueryFormReducer , 
         RazorOrderReducer , 
+        deleteUserReducer ,
         getAllMailReducer , 
         insertCartReducer , 
         createNotesReducer , 

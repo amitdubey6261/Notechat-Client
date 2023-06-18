@@ -192,6 +192,11 @@
     /* margin: 1rem; */
 }
 
+.i-c-2-heading-2{
+    font-family: 'Sora';
+    text-align: center;
+}
+
 .crousal-wrapper-2{
     width: 60%;
     height: 100%;
@@ -213,6 +218,7 @@
 .wrapper-2-head-2{
     font-family:'Bebas Neue', 'sans-serif';
     font-size: 3rem;
+    color: white;
 }
 .wrapper-2-head-3{
     font-family: 'Sora';
@@ -221,10 +227,11 @@
 .wrapper-2-content{
     font-family: 'Sora';
     font-size: 1rem;
+    color: white;
 }
 
 .content{
-    margin: 1rem ;
+    padding: 2rem;
 }
 
 .find-notes-btn{
@@ -237,3 +244,26 @@
     margin-top: 1rem;
 }
 
+.home-main{
+    overflow: scroll;
+}
+
+
+@media( max-width : 600px ){
+    .warapper-2{
+        /* display: none; */
+        flex-direction: column;
+        width: 100%;
+    }
+    .crousal-wrapper-2 {
+        width: 100%;
+        background-color: rgb(255, 0, 0);
+    }
+    .colored-boundary{
+        display: none;
+    }
+    .intro-content , .i-c-2-heading {
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+}

@@ -92,12 +92,12 @@
 
 .cp-form{
     background-color: rgb(30, 30, 30);
-    border: 1px solid white;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding: 1rem;
 }
 
 .cp-form-heading{
@@ -112,4 +112,23 @@
     color: white;
     padding-left: 1rem;
     background-color: black;
+}
+
+@media( max-width : 600px ){
+    .form-section-inner{
+        display: block;
+    }
+    .form-section-left{
+        width: 100%;
+    }
+    .form-section-right{
+        width: 100%;
+    }
+    .cp-form{
+        width: 100%;
+        min-height: 100vh;
+    }
+    .cp-form-heading{
+        font-size: 2rem;
+    }
 }

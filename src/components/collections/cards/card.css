@@ -60,3 +60,9 @@
     color: red;
     font-family: 'Bebas Neue';
 }
+
+@media(max-width:600px){
+    .card{
+        width: 100%;
+    }
+}

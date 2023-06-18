@@ -1,7 +1,5 @@
 import React from "react";
 
-import img from "../../../assets/images/myimg2.png";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const ThumbsPP = ({ res }) => {
@@ -11,7 +9,6 @@ const ThumbsPP = ({ res }) => {
       <div className="thumbsWrapper">
         <div className="tw-up-overlay"></div>
         <div className="tw-btm-overlay"></div>
-        <div className=""></div>
         <Swiper
           spaceBetween={0}
           slidesPerView={1}

@@ -48,6 +48,7 @@ const ForgotPassword = () => {
                             onChange={handleChange}
                         />
                         <input
+                            className="login-btn"
                             type="submit"
                             value="Submit Email"
                         />

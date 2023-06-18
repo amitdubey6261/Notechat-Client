@@ -50,10 +50,28 @@ main{
 
 }
 
+.collection-heading{
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Bebas Neue';
+}
+
+.collection-quote{
+    text-align: center;
+    font-family: 'Sora';
+}
+
 .card-container{
     display: flex;
     flex-wrap: wrap;
     width: 80%;
     justify-content: space-around;
     align-items: center;
+}
+
+
+@media( max-width : 600px ){
+    .card-container{
+        flex-direction: column;
+    }
 }

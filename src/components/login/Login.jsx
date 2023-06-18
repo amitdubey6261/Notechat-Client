@@ -43,12 +43,16 @@ const Login = () => {
   return (
     <div
       className="Login-wrapper"
-      style={{ display: loginDisplay ? "flex" : "none" }}
+      style={
+        {
+          display: loginDisplay ? "flex" : "none",
+        }
+      }
     >
       <div className="login-content">
         <LoginRegisterHead />
         <div className="register-form">
-          <form action="" className="pure-form" onSubmit={submitform}>
+          <form className="pure-form" onSubmit={submitform}>
             <input
               className="inp-fields"
               placeholder="email"
@@ -70,14 +74,7 @@ const Login = () => {
             <span className="forget-pass" onClick={toggleForgotPasswodDisplay}>
               Forgot Password
             </span>
-            <input type="submit" value="Login" />
-            {/* <button
-              type="submit"
-              className="form-submit-btn"
-              onClick={submitform}
-            >
-              <span>login</span>
-            </button> */}
+            <input className="login-btn" type="submit" value="Login" />
           </form>
         </div>
       </div>

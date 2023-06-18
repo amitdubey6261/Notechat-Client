@@ -132,14 +132,9 @@ const CreateNote = () => {
             <div className="form-section-wrapper">
                 <div className="form-section-inner">
                     <div className="form-section-left">
-                        <div className="heading-1">i am amit who are you</div>
+                        <div className="heading-1">Create your products here</div>
                         <div className="heading-2">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias,
-                            at quibusdam dicta optio ullam unde. Corrupti, porro. Et
-                            perferendis minima necessitatibus sequi natus ea explicabo porro
-                            tenetur qui architecto distinctio maiores officia dolor magni, eum
-                            earum magnam eius harum fugit. Tempora fugit inventore animi
-                            tempore perspiciatis? Ex autem quisquam consequatur.
+                            Helllo there ,  you can start making notes here which will visible to our community. The form present below must contains all fields for the better visiblity to our customer and chances for prodcut marketing will increase . Thus , kindly provide the given form fields with pdf thubnails and about and index   .
                         </div>
                         <div className="border"></div>
                         <div className="heading-4">THUMBNAIL</div>

@@ -78,3 +78,38 @@ span{
     display: flex;
     align-items: center;
 }
+
+.ham-i{
+    width: 1cm;
+    height: 1cm;
+    background-color: pink;
+    display: none;
+}
+
+#checkbox:checked ~ #nac-o-i{
+    display: none;
+}
+
+#checkbox{
+    display: none;
+}
+
+
+
+@media( max-width : 600px ){
+    #nac-o-i{
+        position: fixed;
+        top: 0 ;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 20;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .ham-i{
+        display: block;
+    }
+}

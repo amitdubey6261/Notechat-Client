@@ -49,18 +49,18 @@ const FormPage = () => {
                                 <div><span className='overlay-t'>LOCATE ME</span></div>
                                 <div><span className='overlay-t-2'>HOME TOWN</span></div>
                                 <div><span >Mangla Vihar - II Tiranga Chauraha Kanpur Uttar Pradesh INDIA (208021)</span></div>
-                                <div><button className='btn' id='login-box'><span>Open Map</span></button></div>
+                                <div><button className='btn-fp' id='login-box'><span>Open Map</span></button></div>
                             </div>
                             <div className="leftRight">
                                 <div><span className='overlay-t'>LOCATE ME</span></div>
                                 <div><span className='overlay-t-2'>CURRENT</span></div>
-                                <div><span>Jaypee University Of Engineering And Technology Guna Vikram Aditya Bhawan Madhya Pradesh INDIA</span></div>
-                                <div><button className='btn' id='login-box'><span>Open Map</span></button></div>
+                                <div><span>Jaypee University  Raghogarh  Madhya Pradesh INDIA </span></div>
+                                <div><button className='btn-fp' id='login-box'><span>Open Map</span></button></div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="form-section-right">
+                <div className="form-section-right-fp">
                     <div className="form-container" onSubmit={handleFormSubmit}>
                         <form id='aboutForm' action="">
                             <div className='overlay-t'>CONTACT</div>
@@ -69,7 +69,7 @@ const FormPage = () => {
                             <input className='inp-fields' onChange={handleFormChange} value={fields.email} type="email" name="email" id="name" placeholder='Enter Email' />
                             <input className='inp-fields' onChange={handleFormChange} value={fields.contact} type="number" name="contact" id="name" placeholder='Enter Contact' />
                             <textarea  placeholder='Type Here' onChange={handleFormChange} value={fields.query} className=' inp-fields text-area' name="query" id="" cols="30" rows="10"></textarea>
-                            <input type="submit" value="Submit" />
+                            <input className='login-btn' type="submit" value="Submit" />
                         </form>
                     </div>
                 </div>
