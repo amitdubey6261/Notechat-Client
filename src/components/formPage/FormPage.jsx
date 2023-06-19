@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 
 import './formPage.css';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { sendMail } from '../../Redux/local/contactPage';
+import Loader from '../loader/Loader';
 
 
 const FormPage = () => {
@@ -13,6 +14,8 @@ const FormPage = () => {
         contact : "" , 
         query : "" , 
     })
+
+    const {loading} = useSelector( state=>state.sendEmailReducer )
 
     const handleFormSubmit = (e) =>{
         e.preventDefault();
@@ -26,6 +29,9 @@ const FormPage = () => {
 
     return (
         <>
+            {
+                loading && <Loader text={"sending..."}/>
+            }
             <div className='form-container'>
                 <div className="form-section">
                     <div className="form-l-ud">

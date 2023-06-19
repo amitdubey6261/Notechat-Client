@@ -1,6 +1,7 @@
 import { createAsyncThunk, createReducer } from "@reduxjs/toolkit"
 import { apiConfig, backendUrl, handleApiError } from "../../static"
 import axios from "axios"
+import { toast } from "react-toastify"
 
 const initialState = {
     status : false , 
@@ -14,6 +15,7 @@ export const deleteFromCart = createAsyncThunk( 'cart/delete' , async(fields , {
         return res ; 
     }
     catch(e){
+        toast.error(e.message);
         return handleApiError( e , rejectWithValue ) ; 
     }
 })

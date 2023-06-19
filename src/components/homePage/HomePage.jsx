@@ -3,10 +3,21 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import './HomePage.css'
 
-import img from '../../assets/images/img1.png';
-import img2 from '../../assets/images/myimg.png';
-import img3 from '../../assets/images/myimg2.png';
-import img4 from '../../assets/images/myimg3.png';
+import i1 from '../../assets/images/New folder/i1.jpg';
+
+import i7 from '../../assets/images/New folder/i7.jpg';
+import i8 from '../../assets/images/New folder/i8.png';
+import i5 from '../../assets/images/New folder/i5.jpg';
+
+import i10 from '../../assets/images/New folder/i10.jpg';
+import i11 from '../../assets/images/New folder/i11.jpg';
+import i12 from '../../assets/images/New folder/i12.jpg';
+
+import i19 from '../../assets/images/New folder/i19.webp';
+import i20 from '../../assets/images/New folder/i20.webp';
+import i17 from '../../assets/images/New folder/i17.webp';
+
+
 
 import 'swiper/css';
 
@@ -20,10 +31,9 @@ const HomePage = () => {
                         spaceBetween={0}
                         slidesPerView={1}
                     >
-                        <SwiperSlide><div className='crousal-img-container'><img className='crousal-img' src={img} alt="not-found" /></div></SwiperSlide>
-                        <SwiperSlide><div className='crousal-img-container'><img className='crousal-img' src={img2} alt="not-found" /></div></SwiperSlide>
-                        <SwiperSlide><div className='crousal-img-container'><img className='crousal-img' src={img3} alt="not-found" /></div></SwiperSlide>
-                        <SwiperSlide><div className='crousal-img-container'><img className='crousal-img' src={img4} alt="not-found" /></div></SwiperSlide>
+                        <SwiperSlide><div className='crousal-img-container'><img className='crousal-img' src={i19} alt="not-found" /></div></SwiperSlide>
+                        <SwiperSlide><div className='crousal-img-container'><img className='crousal-img' src={i20} alt="not-found" /></div></SwiperSlide>
+                        <SwiperSlide><div className='crousal-img-container'><img className='crousal-img' src={i17} alt="not-found" /></div></SwiperSlide>
                     </Swiper>
                     <div className="left-arrow-hover-wrapper">
                         <span></span>
@@ -38,7 +48,7 @@ const HomePage = () => {
                 </div>
 
                 <div className='home-into-wrapper'>
-                    <img className='home-intro-img' src={img2} alt="not-found" />
+                    <img className='home-intro-img' src={i1} alt="not-found" />
                     <div className='home-intro-img-overlay'>
                         <div className='intro-content'><span> those who never settle for anything else</span></div>
                         <div className='intro-content-2'>
@@ -59,12 +69,9 @@ const HomePage = () => {
                             spaceBetween={ mobile ? 0 : 10 }
                             slidesPerView={mobile ? 1 : 3}
                         >
-                            <SwiperSlide><div className='crousal-img-container'><img className='crousal-img' src={img3} alt="not-found" /></div></SwiperSlide>
-                            <SwiperSlide><div className='crousal-img-container'><img className='crousal-img' src={img} alt="not-found" /></div></SwiperSlide>
-                            <SwiperSlide><div className='crousal-img-container'><img className='crousal-img' src={img} alt="not-found" /></div></SwiperSlide>
-                            <SwiperSlide><div className='crousal-img-container'><img className='crousal-img' src={img} alt="not-found" /></div></SwiperSlide>
-                            <SwiperSlide><div className='crousal-img-container'><img className='crousal-img' src={img} alt="not-found" /></div></SwiperSlide>
-                            <SwiperSlide><div className='crousal-img-container'><img className='crousal-img' src={img} alt="not-found" /></div></SwiperSlide>
+                            <SwiperSlide><div className='crousal-img-container'><img className='crousal-img' src={i7} alt="not-found" /></div></SwiperSlide>
+                            <SwiperSlide><div className='crousal-img-container'><img className='crousal-img' src={i8} alt="not-found" /></div></SwiperSlide>
+                            <SwiperSlide><div className='crousal-img-container'><img className='crousal-img' src={i5} alt="not-found" /></div></SwiperSlide>
 
                         </Swiper>
                         <div className="left-arrow-hover-wrapper">

@@ -5,6 +5,7 @@ import { apiConfig, backendUrl, handleApiError } from "../../static";
 
 const initialState = {
     loginDisplay : false ,
+    loading : false , 
     res : [] , 
     status : false , 
     error : null ,  
@@ -17,6 +18,7 @@ export const loginRequest = createAsyncThunk( 'user/login' , async(obj , {reject
         return res ; 
     }
     catch(e){
+        toast.error(e.message);
         handleApiError( e , rejectWithValue );
     }
 
@@ -35,15 +37,18 @@ export const Login = createReducer( initialState , {
     , 
     [loginRequest.pending] : ( state , action ) =>{
         state.status = false ; 
+        state.loading = true ; 
     }
     ,
     [loginRequest.fulfilled] : ( state , action ) =>{
         state.status = true ;
+        state.loading = false ; 
         state.res = action.payload ; 
     } 
     , 
     [loginRequest.rejected] : ( state , action )=>{
         state.status = false ; 
+        state.loading = false ; 
         state.error = action.payload ; 
     }
 

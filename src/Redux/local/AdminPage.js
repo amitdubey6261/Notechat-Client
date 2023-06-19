@@ -1,6 +1,7 @@
 import { createReducer , createAsyncThunk} from '@reduxjs/toolkit' ; 
 import axios from 'axios' ; 
 import { apiConfig } from '../../static';
+import { toast } from 'react-toastify';
 
 const initialState = {
     toggleUserPageDisplay : false , 
@@ -9,8 +10,13 @@ const initialState = {
 }
 
 export const fetchAllUsers = createAsyncThunk( 'users/fetchAllUsers' , async()=>{
-    const res = await axios.get('http://localhost:5000/api/v1/user/all' , {...apiConfig()});
-    return res ; 
+    try{
+        const res = await axios.get('http://localhost:5000/api/v1/user/all' , {...apiConfig()});
+        return res ; 
+    }
+    catch(e){
+        toast.error(e.message);
+    }
 })
 
 export const AdminReducer = createReducer( initialState  , {

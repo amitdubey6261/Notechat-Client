@@ -17,8 +17,6 @@ const InfoHeader = () => {
 
     const { status, res } = useSelector(state => state.loadUserReducer)
 
-    if (status) console.log()
-
     return (
         <>
             <div

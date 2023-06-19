@@ -8,7 +8,6 @@ import { useSelector } from "react-redux";
 function MyApp() {
   const [numPages, setNumPages] = useState(null);
   const { urlToPdf }= useSelector(state=>state.setPdfReducer) ; 
-  console.log( urlToPdf )
 
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
@@ -25,8 +24,6 @@ function MyApp() {
     if( page > 1)
       setPage( page -= 1);
   }
-
-  const pdf = "https://res.cloudinary.com/daj3qkez6/image/upload/v1686749020/pdfs/rwuolj2z3j223kg4yhpj.pdf";
 
   return (
     <div className="pdf-conatiner">

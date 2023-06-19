@@ -1,6 +1,7 @@
 import { createReducer , createAsyncThunk } from "@reduxjs/toolkit";
 import { backendUrl , apiConfig , handleApiError } from "../../static";
 import axios from "axios"
+import { toast } from "react-toastify";
 
 const initialState = {
     display : false , 
@@ -16,7 +17,7 @@ export const forgotPassword = createAsyncThunk( 'user/forgot ' , async( fields ,
         return res ; 
     }
     catch(e){
-        console.log(e)
+        toast.error( e.message) ;
         return handleApiError( e , rejectWithValue );
     }
 })

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import image from '../../assets/images/myimg.png'
+import i20 from '../../assets/images/New folder/i20.webp';
 import './userPage.css' ; 
 import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '../../Redux/global/Logout';
@@ -29,7 +29,7 @@ const User = () => {
         <>
             <main>
                 <div className="image-wrapper">
-                    <img id='image' src={image} alt="not-found" />
+                    <img id='image' src={i20} alt="not-found" />
                     <div className="image-overlay">
                         <div className="box-outer" id="colored"></div>
                         <div className="box-outer" id="text">

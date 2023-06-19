@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useSelector , useDispatch } from 'react-redux';
 
-import image from '../../assets/images/myimg2.png';
+import i18 from '../../assets/images/New folder/i18.jpeg';
 import './Mycart.css';
 import CartCard from './cartCards/CartCard';
 import Aggregator from './aggregator/Aggregator';
@@ -25,7 +25,7 @@ const Mycart = () => {
         <>
             <main>
                 <div className="image-wrapper">
-                    <img id='image' src={image} alt="not-found" />
+                    <img id='image' src={i18} alt="not-found" />
                     <div className="image-overlay">
                         <div className="box-outer" id="colored"></div>
                         <div className="box-outer" id="text">

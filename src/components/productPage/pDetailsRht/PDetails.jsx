@@ -16,7 +16,6 @@ const PDetails = ({res}) => {
             payload.subject = res.data.notes.subject ; 
             payload.collage =  res.data.notes.collage ;
             payload.rating =  res.data.notes.rating ;
-            console.log( payload );
             dispatch(insertInCart(payload));
         }
     }

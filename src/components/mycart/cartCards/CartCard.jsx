@@ -19,7 +19,7 @@ const CartCard = ({data , userid}) => {
         <>
             <div className="Crad-wrapper">
                 <div className="cart-card-left-section">
-                    <img className="cart-card-img" src={img} alt="not-found" />
+                    <img className="cart-card-img" src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS2-mj_C17GsKX44Jlk0mSvK5wFZRq0OBRo1f7vAkdeg&usqp=CAU&ec=48600112'} alt="not-found" />
                 </div>
                 <div className="cart-card-right-section">
                     <div className="cart-card-details">

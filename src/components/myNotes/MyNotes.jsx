@@ -2,7 +2,7 @@ import React from 'react';
 import './myNotes.css';
 import MyNotesCards from './MyNotesCards';
 
-import image from '../../assets/images/myimg2.png';
+import i14 from '../../assets/images/New folder/i14.webp';
 import { useSelector } from 'react-redux';
 
 
@@ -12,7 +12,7 @@ const MyNotes = () => {
         <>
             <main>
                 <div className="image-wrapper">
-                    <img id='image' src={image} alt="not-found" />
+                    <img id='image' src={i14} alt="not-found" />
                     <div className="image-overlay">
                         <div className="box-outer" id="colored"></div>
                         <div className="box-outer" id="text">

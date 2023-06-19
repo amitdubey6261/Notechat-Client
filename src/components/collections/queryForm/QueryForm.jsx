@@ -8,11 +8,11 @@ import "./queryform.css";
 
 const QueryForm = () => {
     const dispatch = useDispatch();
-    const values = useSelector((state) => state.QueryFormReducer);
+    const values = useSelector(state => state.QueryFormReducer);
 
     const iconstyle = {
-        width: "1cm",
-        height: "1cm",
+        width: "0.7cm",
+        height: "0.7cm",
         position: "absolute",
         right: "5%",
     };
@@ -24,22 +24,23 @@ const QueryForm = () => {
     });
 
     const handleFormChange = (e) => {
-        console.log(e.target.value);
         setfields({ ...fields, [e.target.name]: e.target.value });
+        if (e.target.name == "keyword") {
+            dispatch({
+                type: "setKeyWord",
+                payload: fields.keyword,
+            });
+        }
+        if (e.target.name == "category") {
+            dispatch({
+                type: "setCategory",
+                payload: fields.category,
+            });
+        }
     };
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
-
-        dispatch({
-            type: "setKeyWord",
-            payload: fields.keyword,
-        });
-
-        dispatch({
-            type: "setCategory",
-            payload: fields.category,
-        });
 
         dispatch(getAllNotes(values));
     };
@@ -48,6 +49,7 @@ const QueryForm = () => {
         <>
             <div className="query-form-wrapper">
                 <form id="qform" action="" onSubmit={handleFormSubmit}>
+                <span className="qf-note">Enter minimum 4 letters to search </span>
                     <div className="qf-childs search-wrapper">
                         <BsSearch style={iconstyle} />
                         <input
@@ -74,7 +76,7 @@ const QueryForm = () => {
                     <div className=" qf-childs submit">
                         <input
                             type="submit"
-                            className="category"
+                            className="category qf-sbbtn"
                             id="qform-submit"
                             value="Submit"
                         />

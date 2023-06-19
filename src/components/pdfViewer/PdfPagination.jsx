@@ -4,7 +4,6 @@ import './pdfViewer.css';
 import { AiOutlineStepBackward, AiOutlineStepForward} from 'react-icons/ai/index' ; 
 
 const PdfPagination = (props) => {
-    console.log(props)
     return (
         <>
             <div className='pdfPagination-wrapper'>

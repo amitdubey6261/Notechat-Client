@@ -28,8 +28,6 @@ const Card = ( {props} ) => {
         <Swiper
           spaceBetween={0}
           slidesPerView={1}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
         >
           <SwiperSlide>
             <div className="crousal-img-container">

@@ -7,15 +7,13 @@ import { fetchAllUsers } from "../../Redux/local/AdminPage";
 
 import "./admin.css";
 
-import image from "../../assets/images/myimg2.png";
+import i15 from '../../assets/images/New folder/i15.webp';
 import UserTable from "./table/UserTable";
 
 const Admin = () => {
     const dispatch = useDispatch();
 
     const { status } = useSelector((state) => state.AdminReducer);
-
-    console.log(status);
 
     useEffect(() => {
         dispatch(fetchAllUsers());
@@ -39,7 +37,7 @@ const Admin = () => {
         <>
             <main className="Admin-wrapper">
                 <div className="image-wrapper">
-                    <img id="image" src={image} alt="not-found" />
+                    <img id="image" src={i15} alt="not-found" />
                     <div className="image-overlay">
                         <div className="box-outer" id="colored"></div>
                         <div className="box-outer" id="text">

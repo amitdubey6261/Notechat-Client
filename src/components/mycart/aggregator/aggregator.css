@@ -43,3 +43,12 @@
 .cart-rule{
     width: 80%;
 }
+
+@media(max-width : 600px){
+    .key{
+        font-size: 1rem;
+    }
+    .val{
+        font-size: 1rem;
+    }
+}

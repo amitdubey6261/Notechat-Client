@@ -82,7 +82,7 @@ span{
 .ham-i{
     width: 1cm;
     height: 1cm;
-    background-color: pink;
+
     display: none;
 }
 
@@ -112,4 +112,11 @@ span{
     .ham-i{
         display: block;
     }
+}
+
+.about{
+    background-color: black;
+    color: white;
+    font-family:'Sora' ;
+    padding: 5rem;
 }

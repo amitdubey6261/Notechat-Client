@@ -1,10 +1,12 @@
 import { createAsyncThunk, createReducer } from "@reduxjs/toolkit"
 import { apiConfig, backendUrl, handleApiError } from "../../static"
 import axios from "axios"
+import { toast } from "react-toastify"
 
 const initialstate = {
     res : [] , 
     status : false , 
+    loading : false , 
     error : null , 
 }
 
@@ -20,6 +22,7 @@ export const sendMail = createAsyncThunk( ' user/sendMail ' , async(fields , { r
         return res ; 
     }
     catch(e){
+        toast.error(e.message);
         return handleApiError( e  , rejectWithValue );
     }
 })
@@ -39,15 +42,18 @@ export const getAllMails = createAsyncThunk( 'user/allMails' , async( _ , { reje
 export const sendEmailReducer = createReducer( initialstate , {
     [sendMail.pending] : ( state , action )=>{
         state.status = false ; 
+        state.loading = true ; 
     }
     ,
     [ sendMail.fulfilled ]: ( state , action)=>{
         state.status = true; 
+        state.loading = false ; 
         state.res = action.payload ; 
     }
     ,
     [ sendMail.rejected ]: ( state , action )=>{
         state.status = false ; 
+        state.loading = false ; 
         state.res = action.payload ; 
     }
 })

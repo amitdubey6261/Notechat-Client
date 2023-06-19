@@ -1,6 +1,6 @@
 import React from 'react'
 
-import image from '../../assets/images/myimg.png';
+import i16 from '../../assets/images/New folder/i16.webp';
 
 import FormPage from '../formPage/FormPage';
 
@@ -9,7 +9,7 @@ const ContactPage = () => {
         <>
             <main>
                 <div className="image-wrapper">
-                    <img id='image' src={image} alt="not-found" />
+                    <img id='image' src={i16} alt="not-found" />
                     <div className="image-overlay">
                         <div className="box-outer" id="colored"></div>
                         <div className="box-outer" id="text">

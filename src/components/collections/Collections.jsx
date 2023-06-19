@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 import "./Collections.css";
 
-import image from "../../assets/images/myimg.png";
+import i14 from '../../assets/images/New folder/i14.webp';
 
 import Card from "./cards/Card";
 import { useDispatch, useSelector } from "react-redux";
@@ -17,14 +17,13 @@ const Collections = () => {
 
     useEffect(() => {
         dispatch(getAllNotes());
-        console.log(res, status);
     }, []);
 
     return (
         <>
             <main style={{backgroundColor:'black'}}>
                 <div className="image-wrapper">
-                    <img id="image" src={image} alt="not-found" />
+                    <img id="image" src={i14} alt="not-found" />
                     <div className="image-overlay">
                         <div className="box-outer" id="colored"></div>
                         <div className="box-outer" id="text">

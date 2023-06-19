@@ -48,13 +48,14 @@ function App() {
               pauseOnFocusLoss
               draggable
               pauseOnHover
-              theme="dark"
+              theme="light"
             />
             <Navbar />
             <Login />
             <Register />
             <ForgotPassword/>
             <InfoHeader/>
+            {/* <Loader/> */}
             <Routes>
               <Route path="/" element={<HomePage />}></Route>
               <Route path="/collection" element={<Collections />}></Route>

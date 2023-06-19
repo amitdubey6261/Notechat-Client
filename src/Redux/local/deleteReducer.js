@@ -1,6 +1,7 @@
 import { createAsyncThunk, createReducer } from "@reduxjs/toolkit"
 import axios from "axios"
 import { apiConfig, backendUrl, handleApiError } from "../../static"
+import { toast } from "react-toastify"
 
 const initialState = {
     res : [] , 
@@ -14,6 +15,7 @@ export const delteUser = createAsyncThunk('user/delte' , async (fields , {reject
         return res ;  
     }
     catch(e){
+        toast.error(e.message);
         return handleApiError( e , rejectWithValue ); 
     }
 })

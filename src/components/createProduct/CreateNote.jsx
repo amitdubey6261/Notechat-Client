@@ -5,11 +5,13 @@ import "./createproduct.css";
 
 import image from "../../assets/images/myimg4.png";
 import { useDispatch, useSelector } from "react-redux";
+import Loader from '../loader/Loader.jsx' ; 
 import { createNote } from "../../Redux/local/CreateNotes";
 
 const CreateNote = () => {
     const form = useRef();
     const dispatch = useDispatch() ; 
+    const { loading } = useSelector( state=>state.createNotesReducer );
 
     const { res , status } = useSelector((state) => state.loadUserReducer);
 
@@ -106,6 +108,8 @@ const CreateNote = () => {
     };
 
     return (
+        <>
+        { loading && <Loader text={"creating..."}/> }
         <div className="craete-product-wrapper">
             <div className="image-wrapper">
                 <img id="image" src={image} alt="not-found" />
@@ -338,6 +342,7 @@ const CreateNote = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 

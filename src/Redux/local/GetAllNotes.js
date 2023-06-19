@@ -1,6 +1,7 @@
 import { createAsyncThunk, createReducer } from "@reduxjs/toolkit"
 import axios from "axios"
 import { apiConfig, backendUrl, handleApiError } from "../../static"
+import { toast } from "react-toastify"
 
 const initalState = {
     status : false , 
@@ -10,17 +11,19 @@ const initalState = {
 
 export const getAllNotes = createAsyncThunk( 'notes/all' , async( fields , {rejectWithValue}) =>{
     try{
-        let res = undefined ; 
         if( fields == undefined ){
-            res = await axios.get( `${backendUrl()}/api/v1/notes/all` ) ; 
+            console.log('wo chalah hao ')
+            const res = await axios.get( `${backendUrl()}/api/v1/notes/all` ) ; 
+            console.log(res)
+            return res ; 
         }
         else{
-            res = await axios.get( `${backendUrl()}/api/v1/notes/all?keyword=${fields.keyword}&category=${fields.category}&page=${fields.page}` , {...apiConfig()} ) ; 
+            const res = await axios.get( `${backendUrl()}/api/v1/notes/all?keyword=${fields.keyword}&category=${fields.category}&page=${fields.page}` , {...apiConfig()} ) ;
+            return res ;  
         }
-        return res; 
-        // console.log( res )
     }
     catch(e){
+        toast.error(e.message);
         return handleApiError( e , rejectWithValue );
     }
 })

@@ -3,7 +3,6 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const ThumbsPP = ({ res }) => {
-  console.log( res )
   return (
     <>
       <div className="thumbsWrapper">
