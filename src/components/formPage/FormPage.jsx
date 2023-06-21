@@ -55,13 +55,14 @@ const FormPage = () => {
                                 <div><span className='overlay-t'>LOCATE ME</span></div>
                                 <div><span className='overlay-t-2'>HOME TOWN</span></div>
                                 <div><span >Mangla Vihar - II Tiranga Chauraha Kanpur Uttar Pradesh INDIA (208021)</span></div>
-                                <div><button className='btn-fp' id='login-box'><span>Open Map</span></button></div>
+                                <div><button className='btn-fp' id='login-box'><a href="https://goo.gl/maps/yy3YJuqQoYbcoXM17"><span> Open Map</span></a></button></div>
+                                <a href="https://goo.gl/maps/yy3YJuqQoYbcoXM17"></a>
                             </div>
                             <div className="leftRight">
                                 <div><span className='overlay-t'>LOCATE ME</span></div>
                                 <div><span className='overlay-t-2'>CURRENT</span></div>
                                 <div><span>Jaypee University  Raghogarh  Madhya Pradesh INDIA </span></div>
-                                <div><button className='btn-fp' id='login-box'><span>Open Map</span></button></div>
+                                <div><button className='btn-fp' id='login-box'><a href="https://goo.gl/maps/uhRvFkT1fBBxTWo8A"><span> Open Map</span></a>   </button></div>
                             </div>
                         </div>
                     </div>

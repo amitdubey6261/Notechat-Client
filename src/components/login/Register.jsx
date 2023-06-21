@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./login.css";
 
-import img from "../../assets/images/img1.png";
+import img from "../../assets/images/New folder/il.jpeg"
 
 import LoginRegisterHead from "./LoginRegisterHead";
 import { useDispatch, useSelector } from "react-redux";

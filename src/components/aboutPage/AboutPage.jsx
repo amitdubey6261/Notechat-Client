@@ -13,14 +13,14 @@ const AboutPage = () => {
                         <div className="box-outer" id="colored"></div>
                         <div className="box-outer" id="text">
                             <div className="img-o-c-t "><span className='overlay-t' id="">CONNECT</span></div>
-                            <div className="img-o-c-t"><h2 id=""> <span className='overlay-t-2'>CONNECT WITH AMIT </span></h2></div>
-                            <div className="img-o-c-t"><span id="">Be in contact with full stack developer</span></div>
+                            <div className="img-o-c-t"><h2 id=""> <span className='overlay-t-2'> TEAM CARPEDIEM </span></h2></div>
+                            <div className="img-o-c-t"><span id="">My team members in Hackathon</span></div>
                         </div>
                     </div>
                 </div>
             </main>
             <div className="about-container">
-                <h1 className='heading-apage'> Hackathon winning project 2022 </h1>
+                <h1 className='heading-apage'> Hackathon winning idea in 2k22 implimented now </h1>
                 <div className="profile-pictures">
                     <div style={{backgroundColor:"black"}} className="image-container">
                         <img className='img-ab' src={'https://media.licdn.com/dms/image/D4D35AQG2Bnea14IWrQ/profile-framedphoto-shrink_800_800/0/1683042680498?e=1687766400&v=beta&t=2cgPa9ebShFlfv2FU4Iwc2ewA3chHbyc1bdvWtHQsC0'} alt="not-found" />

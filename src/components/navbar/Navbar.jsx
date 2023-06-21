@@ -14,7 +14,9 @@ const Navbar = () => {
     const { status } = useSelector( state=>state.loadUserReducer );
 
     const l_tgleClick = () =>{
-        checkRef.current.click() ; 
+        if( window.outerWidth <= 600 ){
+            checkRef.current.click() ;
+        }
     }
 
     const inconStyle = {
@@ -32,10 +34,10 @@ const Navbar = () => {
                     <div onClick={l_tgleClick}  className="ham-i">
                         <AiOutlineClose style={inconStyle}/>
                     </div>
-                    <div className="navigate"><Link to='/'><span>Home</span></Link></div>
-                    <div className="navigate"><Link to='/collection'><span>Collection</span></Link></div>
-                    <div className="navigate"><Link to="/about"><span>About</span></Link></div>
-                    <div className="navigate"><Link to="/contact"><span>Contact</span></Link></div>
+                    <div onClick={l_tgleClick} className="navigate"><Link to='/'><span>Home</span></Link></div>
+                    <div onClick={l_tgleClick} className="navigate"><Link to='/collection'><span>Collection</span></Link></div>
+                    <div onClick={l_tgleClick} className="navigate"><Link to="/about"><span>About</span></Link></div>
+                    <div onClick={l_tgleClick} className="navigate"><Link to="/contact"><span>Contact</span></Link></div>
                 </div>
                 { status ? <LogoutBtn/> : <LoginBtn/> }
             </nav>

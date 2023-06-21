@@ -19,6 +19,8 @@ import { deleteFromCartReducer } from "./local/deleteFromCart";
 import { RazorOrderReducer  } from "./local/RazorOrder";
 import { setPdfReducer } from "./local/pdfPage";
 import { deleteUserReducer } from "./local/deleteReducer";
+import { infoTogglerReducer } from "./local/loginToggler";
+import { resetReducer } from "./local/resetPassword";
 
 const store = configureStore({
     reducer: {
@@ -43,6 +45,8 @@ const store = configureStore({
         getAllFromCartReducer , 
         deleteFromCartReducer  , 
         getProductDetailsReducer ,
+        infoTogglerReducer , 
+        resetReducer , 
     }
     ,
     middleware: [

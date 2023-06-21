@@ -4,10 +4,12 @@ import { Link } from "react-router-dom";
 import { FaBoxes, FaPen, FaUserCircle } from "react-icons/fa";
 import { BsFillBookFill, BsCartFill } from "react-icons/bs";
 
-import img from '../../assets/images/myimg2.png';
+import img from '../../assets/images/New folder/i2.png';
 import { useSelector } from "react-redux";
 
 const InfoHeader = () => {
+
+    const displayStatus = useSelector( state=>state.infoTogglerReducer.display ) ; 
 
     const iconStyle = {
         width: '1cm',
@@ -19,7 +21,7 @@ const InfoHeader = () => {
 
     return (
         <>
-            <div
+            <div style={{ display : displayStatus ? "flex" : "none"  }}
                 className="info-header-wrapper">
                 <div className="info-head-child image-contatiner">
                     <img id="info-user-image" src={status ? res.data.user.image.url : img} alt="not-found" />

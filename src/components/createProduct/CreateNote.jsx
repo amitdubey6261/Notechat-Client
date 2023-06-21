@@ -124,11 +124,11 @@ const CreateNote = () => {
                         <div className="img-o-c-t">
                             <h2 id="">
                                 {" "}
-                                <span className="overlay-t-2">CONNECT WITH AMIT </span>
+                                <span className="overlay-t-2">START CREATING HERE </span>
                             </h2>
                         </div>
                         <div className="img-o-c-t">
-                            <span id="">Be in contact with full stack developer</span>
+                            <span id="">create your notes and earn money</span>
                         </div>
                     </div>
                 </div>

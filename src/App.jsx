@@ -20,12 +20,12 @@ import { loadUser } from "./Redux/global/LoadUser.js";
 import { useEffect } from "react";
 import ForgotPassword from "./components/login/ForgotPassword.jsx";
 import InfoHeader from "./components/InfoHeader/InfoHeader.jsx";
-import OrderPage from "./components/OrderPage/OrderPage.jsx";
 import PdfViewer from "./components/pdfViewer/pdfViewer.jsx";
 import ProductPage from "./components/productPage/ProductPage.jsx";
 import Mycart from "./components/mycart/Mycart.jsx";
 import MyNotes from "./components/myNotes/MyNotes.jsx";
 import User from "./components/userPage/User.jsx";
+import Reset from "./components/login/Reset.jsx";
 
 function App() {
   
@@ -55,7 +55,6 @@ function App() {
             <Register />
             <ForgotPassword/>
             <InfoHeader/>
-            {/* <Loader/> */}
             <Routes>
               <Route path="/" element={<HomePage />}></Route>
               <Route path="/collection" element={<Collections />}></Route>
@@ -63,12 +62,12 @@ function App() {
               <Route path="/contact" element={<ContactPage />}></Route>
               <Route path="/create" element={<CreateNote />}></Route>
               <Route path="/admin" element={<Admin />}></Route>
-              <Route path="/orders" element={<OrderPage/>}></Route>
               <Route path="/pdf" element={<PdfViewer/>}></Route>
               <Route path='/product' element={<ProductPage/>}></Route>
               <Route path='/cart' element={<Mycart/>}></Route>
               <Route path="/myNotes" element={<MyNotes/>}></Route>
               <Route path="/user" element={<User/>}></Route>
+              <Route path="/reset/:id" element={<Reset/>}></Route>
             </Routes>
             <Footer />
           </Provider>

@@ -20,6 +20,7 @@ import i17 from '../../assets/images/New folder/i17.webp';
 
 
 import 'swiper/css';
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
     const mobile = (window.outerWidth < 600) ? true : false;
@@ -56,7 +57,7 @@ const HomePage = () => {
                             <div className='i-c-2-heading-2'>Join India’s most exciting homegrown study community.</div>
                             <div className="i-c-2-btn">
                                 <button className='style-btn style-btn-1'>join</button>
-                                <button className='style-btn style-btn-2'>ntc </button>
+                                <button className='style-btn style-btn-2'><Link to="/about"><span>ntc</span></Link></button>
                             </div>
                         </div>
                     </div>
@@ -95,7 +96,7 @@ const HomePage = () => {
                             <div className="metric-2"></div>
                             <div className="metric-3"></div>
                         </div>
-                        <button className='find-notes-btn'>find notes</button>
+                        <button className='find-notes-btn'><Link to="/collection"><span>find notes</span></Link></button>
                     </div>
                     <div className="colored-boundary"></div>
                 </div>

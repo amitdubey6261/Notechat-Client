@@ -30,8 +30,8 @@ const Mycart = () => {
                         <div className="box-outer" id="colored"></div>
                         <div className="box-outer" id="text">
                             <div className="img-o-c-t "><span className='overlay-t' id="">CONNECT</span></div>
-                            <div className="img-o-c-t"><h2 id=""> <span className='overlay-t-2'>CONNECT WITH AMIT </span></h2></div>
-                            <div className="img-o-c-t"><span id="">Be in contact with full stack developer</span></div>
+                            <div className="img-o-c-t"><h2 id=""> <span className='overlay-t-2'> PRODUCTS IN CART </span></h2></div>
+                            <div className="img-o-c-t"><span id="">add products in cart , pay and learn</span></div>
                         </div>
                     </div>
                 </div>
@@ -43,10 +43,8 @@ const Mycart = () => {
                             res.data.cartProducts.map((elem , idx)=> <CartCard userid={Userres.data.user._id} data={elem} key={elem._id}/> )
                         }
                     <div className="agregator-conatainer">
-                        {/* { status && <Aggregator bill={res.data.totalBill} data={res.data.cards}/> } */}
                         {
-                            status && 
-                            <Aggregator data={res} />
+                            status && <Aggregator data={res} />
                         }
                     </div>
                     </div>

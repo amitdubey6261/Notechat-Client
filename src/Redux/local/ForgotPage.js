@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 
 const initialState = {
     display : false , 
+    loading : false , 
     res : {} , 
     status : false , 
     error : null , 
@@ -34,15 +35,19 @@ export const ForgotReducer = createReducer( initialState , {
     ,
     [forgotPassword.pending] : ( state , action )=>{
         state.status = false ; 
+        state.loading = true ; 
     }
     ,
     [forgotPassword.fulfilled]: ( state , action )=>{
+        toast.success("reset link send on your mail")
         state.status = true ; 
         state.res = action.payload ; 
+        state.loading = false ; 
     }
     ,
     [forgotPassword.rejected] : ( state , action )=>{
         state.status = false ; 
         state.error = action.payload ; 
+        state.loading = false ; 
     }
 })

@@ -10,11 +10,17 @@ const LogoutBtn = () => {
         dispatch(logout());
     };
 
+    const infoHeaderToggler = () =>{
+        dispatch({
+            type : "toggleinfoHeader"
+        })
+    }
+
     return (
         <>
             <div className="LoginBtn-wrapper">
                 <div id="logout-box" onClick={handleLogout}><span>Logout</span></div>
-                <span className="l-opener"><BsFillCaretRightFill  /></span>
+                <span onClick={infoHeaderToggler} className="l-opener"><BsFillCaretRightFill  /></span>
             </div>
         </>
     );
