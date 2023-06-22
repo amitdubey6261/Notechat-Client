@@ -2,7 +2,7 @@ import React from 'react'
 
 import './ProductPage.css'
 import { useDispatch, useSelector } from 'react-redux'
-import ThumbsPP from './thumbnailsPP/thumbsPP';
+import ThumbsPP from './thumbnailsPP/ThumbsPP';
 import PDetails from './pDetailsRht/PDetails';
 
 const ProductPage = () => {
