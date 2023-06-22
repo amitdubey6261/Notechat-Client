@@ -1,6 +1,6 @@
 import { createAsyncThunk, createReducer } from "@reduxjs/toolkit"
 import axios from "axios"
-import { apiConfig, handleApiError } from "../../static"
+import { apiConfig, backendUrl, handleApiError } from "../../static"
 
 const initialState = {
     status : false , 
@@ -10,7 +10,7 @@ const initialState = {
 
 export const loadUser = createAsyncThunk( `user/loadUser` , async( _ , {rejectWithValue})=>{
     try{
-        const res = await axios.get( `http://localhost:5000/api/v1/user` , {...apiConfig()});
+        const res = await axios.get( `${backendUrl()}/api/v1/user` , {...apiConfig()});
         return res ; 
     }
     catch(e){

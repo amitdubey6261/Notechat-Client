@@ -1,5 +1,5 @@
 import { createAsyncThunk, createReducer } from "@reduxjs/toolkit";
-import { apiConfig, handleApiError } from "../../static";
+import { apiConfig, backendUrl, handleApiError } from "../../static";
 import axios from "axios";
 
 const initalState = {
@@ -8,7 +8,7 @@ const initalState = {
 
 export const logout = createAsyncThunk( `user/logout` , async ( _ , {rejectWithValue})=>{
     try{
-        const res = await axios.get( `http://localhost:5000/api/v1/user/logout` , {...apiConfig()}) ; 
+        const res = await axios.get( `${backendUrl()}/api/v1/user/logout` , {...apiConfig()}) ; 
         return res ; 
     }
     catch(e){
