@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import LoginRegisterHead from './LoginRegisterHead'
-import './Login.css';
+import './login.css';
 import img from "../../assets/images/New folder/il.jpeg";
 import {toast} from 'react-toastify'
 import { useDispatch } from 'react-redux';
-import { resetPassword } from '../../Redux/local/resetPassword';
+import { resetPassword } from '../../Redux/local/ResetPassword';
 
 const Reset = () => {
 
