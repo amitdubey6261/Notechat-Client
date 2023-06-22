@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './productPage.css'
+import './ProductPage.css'
 import { useDispatch, useSelector } from 'react-redux'
 import ThumbsPP from './thumbnailsPP/thumbsPP';
 import PDetails from './pDetailsRht/PDetails';
