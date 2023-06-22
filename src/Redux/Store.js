@@ -20,7 +20,7 @@ import { RazorOrderReducer  } from "./local/RazorOrder";
 import { setPdfReducer } from "./local/pdfPage";
 import { deleteUserReducer } from "./local/deleteReducer";
 import { infoTogglerReducer } from "./local/loginToggler";
-import { resetReducer } from "./local/resetPassword";
+import { resetReducer } from "./local/ResetPassword";
 
 const store = configureStore({
     reducer: {
