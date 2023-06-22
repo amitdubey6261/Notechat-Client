@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useSelector , useDispatch } from 'react-redux';
 
 import i18 from '../../assets/images/New folder/i18.jpeg';
-import './Mycart.css';
+import './MyCart.css';
 import CartCard from './cartCards/CartCard';
 import Aggregator from './aggregator/Aggregator';
 import { getAllFromCart } from '../../Redux/local/getAllCart';
