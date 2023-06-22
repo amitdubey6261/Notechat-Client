@@ -20,7 +20,7 @@ import { loadUser } from "./Redux/global/LoadUser.js";
 import { useEffect } from "react";
 import ForgotPassword from "./components/login/ForgotPassword.jsx";
 import InfoHeader from "./components/InfoHeader/InfoHeader.jsx";
-import PdfViewer from "./components/pdfViewer/pdfViewer.jsx";
+import PdfViewer from "./components/pdfViewer/PdfViewer.jsx";
 import ProductPage from "./components/productPage/ProductPage.jsx";
 import Mycart from "./components/mycart/Mycart.jsx";
 import MyNotes from "./components/myNotes/MyNotes.jsx";
