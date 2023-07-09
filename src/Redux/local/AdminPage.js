@@ -1,6 +1,6 @@
 import { createReducer , createAsyncThunk} from '@reduxjs/toolkit' ; 
 import axios from 'axios' ; 
-import { apiConfig } from '../../static';
+import { apiConfig, backendUrl } from '../../static';
 import { toast } from 'react-toastify';
 
 const initialState = {
@@ -11,7 +11,7 @@ const initialState = {
 
 export const fetchAllUsers = createAsyncThunk( 'users/fetchAllUsers' , async()=>{
     try{
-        const res = await axios.get('http://localhost:5000/api/v1/user/all' , {...apiConfig()});
+        const res = await axios.get(`${backendUrl()}/api/v1/user/all` , {...apiConfig()});
         return res ; 
     }
     catch(e){

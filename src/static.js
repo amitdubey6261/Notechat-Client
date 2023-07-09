@@ -1,6 +1,6 @@
 export const backendUrl = () => {
     // return `http://localhost:5000`;
-    return '' ; 
+    return `` ; 
 };
 
 export const apiConfig = () => {
